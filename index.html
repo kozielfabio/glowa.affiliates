@@ -92,7 +92,7 @@
   .hero .lede{margin-top:16px}.hero .btn-row{margin-top:28px}
   .hero-sub{margin-top:16px;font-size:12.5px;color:var(--ink-muted)}.hero-sub b{color:var(--pink-deep)}
   .hero-visual{position:relative;max-width:360px;margin-inline:auto;width:100%}
-  .hero-visual .shot img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center}
+  .hero-visual .shot img{width:100%;height:auto}
   .hero-visual .shot{border-radius:26px;overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 80px rgba(184,92,120,.28);transform:rotate(2.5deg);transition:transform .6s var(--ease);background:#fff}
   .hero-visual:hover .shot{transform:rotate(0)}
   .hero-visual .tag{position:absolute;left:-18px;bottom:30px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px rgba(184,92,120,.22);animation:float 4s ease-in-out infinite}
@@ -114,10 +114,10 @@
   .car__track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px clamp(20px,5vw,48px) 22px;margin-inline:calc(-1 * clamp(20px,5vw,48px));cursor:grab;-webkit-overflow-scrolling:touch}
   .car__track::-webkit-scrollbar{display:none}
   .car__track.drag{cursor:grabbing;scroll-snap-type:none}
-  .slide{flex:0 0 clamp(250px,72vw,330px);scroll-snap-align:center;background:var(--blush);border:1px solid var(--border);border-radius:26px;padding:14px;box-shadow:0 14px 40px rgba(184,92,120,.1);transition:transform .45s var(--ease),box-shadow .4s}
+  .slide{flex:0 0 auto;scroll-snap-align:center;background:var(--blush);border:1px solid var(--border);border-radius:26px;padding:14px;box-shadow:0 14px 40px rgba(184,92,120,.1);transition:transform .45s var(--ease),box-shadow .4s}
   .slide:hover{transform:translateY(-6px);box-shadow:0 28px 56px rgba(184,92,120,.2)}
-  .slide .fr{aspect-ratio:4/5;background:#121212;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(42,31,36,.18)}
-  .slide img{width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;-webkit-user-drag:none}
+  .slide .fr{background:#121212;border-radius:18px;overflow:hidden;line-height:0;box-shadow:0 10px 28px rgba(42,31,36,.18)}
+  .slide img{height:clamp(300px,68vw,440px);width:auto;max-width:none;display:block;pointer-events:none;-webkit-user-drag:none}
   .slide p{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);padding:12px 6px 4px;display:flex;gap:8px;align-items:center}
   .slide p::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink-deep)}
   .car__nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
@@ -262,6 +262,16 @@
   .strat-p{margin:14px auto 0;max-width:560px;font-size:15px;line-height:1.7;opacity:.95}
   .strat .btn{margin-top:24px;background:#fff;color:var(--pink-deep);box-shadow:0 14px 30px rgba(42,31,36,.25)}
   @media(max-width:760px){.bump{grid-template-columns:1fr}}
+
+  /* fotos de modelo (tamanho natural, sem corte) */
+  .strat{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(22px,4vw,48px);align-items:center;text-align:left}
+  .strat-img img{width:100%;height:auto;border-radius:24px;border:4px solid rgba(255,255,255,.4);box-shadow:0 24px 50px rgba(42,31,36,.35)}
+  .strat-txt .strat-t,.strat-txt .strat-p{margin-left:0;margin-right:0}
+  @media(max-width:760px){.strat{grid-template-columns:1fr;text-align:center}.strat-img{max-width:280px;margin-inline:auto}.strat-txt .strat-t,.strat-txt .strat-p{margin-inline:auto}}
+  .life{background:#fff}
+  .life-card{position:relative;max-width:980px;margin:0 auto;border-radius:30px;overflow:hidden;line-height:0;box-shadow:0 30px 70px rgba(184,92,120,.25);border:1px solid var(--border)}
+  .life-card img{width:100%;height:auto}
+  .life-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:clamp(40px,8vw,90px) clamp(18px,4vw,36px) clamp(16px,3vw,28px);line-height:1.3;color:#fff;font-family:"Cormorant Garamond",serif;font-size:clamp(1.15rem,2.6vw,1.7rem);font-weight:500;background:linear-gradient(to top,rgba(42,31,36,.78),transparent)}
 </style>
 </head>
 <body>
@@ -384,12 +394,12 @@
     </div>
 
     <!-- ESTRATÉGIA -->
-    <div class="strat rv">
+    <div class="strat rv"><div class="strat-img"><img src="src/img/victoria%20secret.jpg" onerror="imgFb(this)" alt="Modelo loira em cadeira de backstage com robe rosa" loading="lazy"></div><div class="strat-txt">
       <p class="script">tem muito seguidor?</p>
       <h3 class="strat-t">A gente monta uma <em>estratégia só sua</em> pra você vender todo dia, muitoooo. 💸</h3>
       <p class="strat-p">Quanto maior o seu público, maior o potencial. Você conta como é o seu perfil e a gente desenha o plano junto: o que postar, quando postar e como vender sem cansar a sua audiência.</p>
       <a href="#" data-wa class="btn">Quero minha estratégia →</a>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -459,6 +469,20 @@
       <div class="step rv" style="--d:160ms"><div class="step__n">3</div><div><h3>Recebe tudo</h3><p>Seu site exclusivo e o playbook de vendas.</p></div></div>
       <div class="step rv" style="--d:240ms"><div class="step__n">4</div><div><h3>Vende com a gente</h3><p>Entra no grupo e começa a ver as comissões. 💸</p></div></div>
     </div>
+  </div>
+</section>
+
+<!-- UNIVERSO GLOWA -->
+<section class="life">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow rv">Universo GLOWA</p>
+      <h2 class="title rv">Beleza, presença e <em>autocuidado</em></h2>
+    </div>
+    <figure class="life-card rv">
+      <img src="src/img/modelo1.jpg" onerror="imgFb(this)" alt="Modelo recebendo maquiagem em backstage rosa" loading="lazy">
+      <figcaption>O mesmo universo que você já mostra no feed, agora com estrutura pra vender. ♡</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -542,7 +566,7 @@
     let down = false, sx = 0, sl = 0;
     t.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; sx = e.clientX; sl = t.scrollLeft; t.classList.add('drag'); t.setPointerCapture(e.pointerId); });
     t.addEventListener('pointermove', e => { if (down) t.scrollLeft = sl - (e.clientX - sx); });
-    const up = () => { if (!down) return; down = false; t.classList.remove('drag'); const w = s(); t.scrollTo({ left: Math.round(t.scrollLeft / w) * w, behavior: 'smooth' }); };
+    const up = () => { if (!down) return; down = false; t.classList.remove('drag'); const tl=t.getBoundingClientRect().left, c=t.scrollLeft+t.clientWidth/2; let best=null,d=1e9; t.querySelectorAll('.slide').forEach(el=>{const l=el.getBoundingClientRect().left-tl+t.scrollLeft, m=Math.abs(l+el.offsetWidth/2-c); if(m<d){d=m;best=[el,l]}}); if(best) t.scrollTo({left:best[1]-(t.clientWidth-best[0].offsetWidth)/2,behavior:'smooth'}); };
     t.addEventListener('pointerup', up); t.addEventListener('pointercancel', up);
   })();
 
