@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.classList.add('js');function imgFb(i){var b=['','images/','img/'],f=i.dataset.f||i.getAttribute('src');i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
+<script>document.documentElement.classList.add('js');function imgFb(i){var b=['src/img/','','images/','img/'],f=i.dataset.f||i.getAttribute('src').split('/').pop();i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLOWA Afiliadas | Dinheiro entrando com um sistema completo</title>
@@ -309,7 +309,7 @@
         <p class="hero-sub rv" style="--d:500ms">Resposta em <b>menos de 24h</b> · a gente cuida de você de pertinho 💌</p>
       </div>
       <div class="hero-visual rv" style="--d:300ms">
-        <div class="shot"><img src="receitacakto.jpg" onerror="imgFb(this)" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
+        <div class="shot"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
         <div class="tag"><small>Em um único dia</small><strong>R$ 6.009,95</strong></div>
         <div class="tag2">Print real ✦</div>
       </div>
@@ -329,10 +329,10 @@
     </div>
     <div class="car rv">
       <div class="car__track" id="track">
-        <figure class="slide"><div class="fr"><img src="receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
-        <figure class="slide"><div class="fr"><img src="vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
-        <figure class="slide"><div class="fr"><img src="vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
-        <figure class="slide"><div class="fr"><img src="graficocakto.jpg" onerror="imgFb(this)" alt="Gráfico de receitas do dia com 35 vendas" loading="lazy" draggable="false"></div><p>35 vendas · R$ 686</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/graficocakto.jpg" onerror="imgFb(this)" alt="Gráfico de receitas do dia com 35 vendas" loading="lazy" draggable="false"></div><p>35 vendas · R$ 686</p></figure>
       </div>
       <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
