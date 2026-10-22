@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');function imgFb(i){var b=['','images/','img/'],f=i.dataset.f||i.getAttribute('src');i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLOWA Afiliadas | Dinheiro entrando com um sistema completo</title>
@@ -92,6 +92,7 @@
   .hero .lede{margin-top:16px}.hero .btn-row{margin-top:28px}
   .hero-sub{margin-top:16px;font-size:12.5px;color:var(--ink-muted)}.hero-sub b{color:var(--pink-deep)}
   .hero-visual{position:relative;max-width:360px;margin-inline:auto;width:100%}
+  .hero-visual .shot img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center}
   .hero-visual .shot{border-radius:26px;overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 80px rgba(184,92,120,.28);transform:rotate(2.5deg);transition:transform .6s var(--ease);background:#fff}
   .hero-visual:hover .shot{transform:rotate(0)}
   .hero-visual .tag{position:absolute;left:-18px;bottom:30px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px rgba(184,92,120,.22);animation:float 4s ease-in-out infinite}
@@ -115,7 +116,8 @@
   .car__track.drag{cursor:grabbing;scroll-snap-type:none}
   .slide{flex:0 0 clamp(250px,72vw,330px);scroll-snap-align:center;background:var(--blush);border:1px solid var(--border);border-radius:26px;padding:14px;box-shadow:0 14px 40px rgba(184,92,120,.1);transition:transform .45s var(--ease),box-shadow .4s}
   .slide:hover{transform:translateY(-6px);box-shadow:0 28px 56px rgba(184,92,120,.2)}
-  .slide img{width:100%;border-radius:16px;pointer-events:none;-webkit-user-drag:none}
+  .slide .fr{aspect-ratio:4/5;background:#121212;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(42,31,36,.18)}
+  .slide img{width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;-webkit-user-drag:none}
   .slide p{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);padding:12px 6px 4px;display:flex;gap:8px;align-items:center}
   .slide p::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink-deep)}
   .car__nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
@@ -283,7 +285,7 @@
         <p class="hero-sub rv" style="--d:500ms">Resposta em <b>menos de 24h</b> · vagas limitadas pra manter o suporte</p>
       </div>
       <div class="hero-visual rv" style="--d:300ms">
-        <div class="shot"><img src="img/receitacakto.jpg" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
+        <div class="shot"><img src="receitacakto.jpg" onerror="imgFb(this)" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
         <div class="tag"><small>Em um único dia</small><strong>R$ 6.009,95</strong></div>
         <div class="tag2">Print real ✦</div>
       </div>
@@ -303,10 +305,10 @@
     </div>
     <div class="car rv">
       <div class="car__track" id="track">
-        <figure class="slide"><img src="img/receitacakto.jpg" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"><p>Faturamento em um dia</p></figure>
-        <figure class="slide"><img src="img/vendascakto.jpg" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"><p>Comissões chegando</p></figure>
-        <figure class="slide"><img src="img/vendascakto2.jpg" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"><p>Mais vendas no mesmo dia</p></figure>
-        <figure class="slide"><img src="img/graficocakto.jpg" alt="Gráfico de receitas do dia com 35 vendas" loading="lazy" draggable="false"><p>35 vendas · R$ 686</p></figure>
+        <figure class="slide"><div class="fr"><img src="receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
+        <figure class="slide"><div class="fr"><img src="vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
+        <figure class="slide"><div class="fr"><img src="vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
+        <figure class="slide"><div class="fr"><img src="graficocakto.jpg" onerror="imgFb(this)" alt="Gráfico de receitas do dia com 35 vendas" loading="lazy" draggable="false"></div><p>35 vendas · R$ 686</p></figure>
       </div>
       <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
@@ -335,11 +337,11 @@
       <div class="res">
         <small>Potencial no mês</small>
         <div class="num"><span>R$</span><b id="total">0</b></div>
-        <p class="sub"><b id="vm">300</b> vendas no mês</p>
+        <p class="sub"><b id="vm">300</b> vendas no mês · ~R$ 27 por venda</p>
         <a href="#" data-wa class="btn">Quero esse resultado →</a>
       </div>
     </div>
-    <p class="disc">Simulação ilustrativa, calculada pela média dos prints acima (R$ 686 em 35 vendas ≈ R$ 19,60 por venda). Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
+    <p class="disc">Simulação ilustrativa, calculada com a comissão média de cerca de R$ 27 por venda. Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
   </div>
 </section>
 
@@ -453,7 +455,7 @@
   const WHATSAPP = "554796567823";
   const MESSAGE = "Oi, tudo bem? 💖 Acabei de chegar pelo site de afiliadas do GLOWA e quero muito vender com vocês! Sou influencer e queria saber os próximos passos pra me afiliar 🌸✨";
   const CAKTO_INVITE = "https://app.cakto.com.br/affiliate/invite/d1a5edec-e555-4bdb-809c-db7954c337ce";
-  const COMMISSION_PER_SALE = 686 / 35; // média tirada dos prints (≈ R$ 19,60)
+  const COMMISSION_PER_SALE = 27; // comissão média por venda (cerca de R$ 27)
 
   const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESSAGE);
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
