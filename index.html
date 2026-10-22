@@ -4,7 +4,7 @@
 <script>document.documentElement.classList.add('js');function imgFb(i){var b=['src/img/','','images/','img/'],f=i.dataset.f||i.getAttribute('src').split('/').pop();i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLOWA Afiliadas | Dinheiro entrando com um sistema completo</title>
+<title>GLOWA Afiliadas | A marca que influenciadoras querem representar</title>
 <meta name="description" content="Seja afiliada GLOWA: mecanismo de vendas validado, site exclusivo, playbook, grupo e suporte. Você recebe tudo pronto pra vender.">
 <meta name="theme-color" content="#FFF9F7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -272,6 +272,47 @@
   .life-card{position:relative;max-width:980px;margin:0 auto;border-radius:30px;overflow:hidden;line-height:0;box-shadow:0 30px 70px rgba(184,92,120,.25);border:1px solid var(--border)}
   .life-card img{width:100%;height:auto}
   .life-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:clamp(40px,8vw,90px) clamp(18px,4vw,36px) clamp(16px,3vw,28px);line-height:1.3;color:#fff;font-family:"Cormorant Garamond",serif;font-size:clamp(1.15rem,2.6vw,1.7rem);font-weight:500;background:linear-gradient(to top,rgba(42,31,36,.78),transparent)}
+
+  /* comissão no hero */
+  .comm{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .comm div{background:rgba(255,255,255,.88);border:1px solid var(--border);border-radius:16px;padding:10px 14px;display:flex;flex-direction:column;gap:2px;box-shadow:0 8px 22px rgba(184,92,120,.1)}
+  .comm b{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.1;color:var(--pink-deep);font-weight:700}
+  .comm span{font-size:11px;font-weight:600;color:var(--ink-soft);line-height:1.3;max-width:150px}
+  @media(max-width:860px){.comm{justify-content:center}.comm div{align-items:center;text-align:center}}
+  /* o que é o glowa */
+  .prod{background:#fff}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .fact{background:var(--blush);border:1px solid var(--border);border-radius:24px;padding:24px 18px;text-align:center;transition:transform .45s var(--ease),box-shadow .4s}
+  .fact:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(184,92,120,.16)}
+  .fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(1.5rem,2.6vw,2rem);color:var(--pink-deep);line-height:1.1;font-weight:700}
+  .fact span{display:block;margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--ink-soft)}
+  .prod-p{max-width:720px;margin:30px auto 0;text-align:center;font-size:15.5px;line-height:1.8;color:var(--ink-soft)}
+  @media(max-width:860px){.facts{grid-template-columns:1fr 1fr}}
+  @media(max-width:460px){.facts{grid-template-columns:1fr}}
+  .proof-note{max-width:640px;margin:14px auto 0;text-align:center;font-size:12.5px;line-height:1.7;color:var(--ink-muted)}
+  .note--s{margin-top:10px}.note--s a{color:var(--pink-deep);font-weight:700;border-bottom:1px solid var(--pink)}
+  /* depoimentos (só aparecem se preenchidos) */
+  .tst{background:var(--blush)}
+  .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .tcard{background:#fff;border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:0 12px 34px rgba(184,92,120,.1)}
+  .tcard img{width:72px;height:72px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid var(--pink-soft)}
+  .tcard p{font-family:"Cormorant Garamond",serif;font-size:1.2rem;line-height:1.5}
+  .tcard b{display:block;margin-top:12px;font-size:14px}.tcard b a{color:var(--pink-deep)}
+  .tcard small{color:var(--ink-muted);font-size:12px}
+  .mock img.real{width:100%;height:auto;display:block}
+
+  /* autoridade */
+  .auth{background:var(--ink);color:#fff}
+  .auth::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(50% 60% at 15% 0%,rgba(212,122,150,.35),transparent 70%),radial-gradient(40% 50% at 90% 100%,rgba(201,168,124,.18),transparent 70%)}
+  .auth .eyebrow{color:var(--pink)}
+  .auth .title{color:#fff}.auth .title em{color:var(--pink)}
+  .auth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .auth-c{text-align:center;padding:34px 20px;border:1px solid rgba(232,160,181,.28);border-radius:28px;background:rgba(255,255,255,.04);backdrop-filter:blur(6px);transition:transform .45s var(--ease),border-color .4s,background .4s}
+  .auth-c:hover{transform:translateY(-6px);border-color:#C9A87C;background:rgba(255,255,255,.07)}
+  .auth-c b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.8rem,6vw,4.4rem);line-height:1;background:linear-gradient(180deg,#F4D9B5,#C9A87C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#C9A87C}
+  .auth-c span{display:block;margin-top:12px;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.78)}
+  .auth-p{max-width:620px;margin:34px auto 28px;text-align:center;font-size:15.5px;line-height:1.8;color:rgba(255,255,255,.82)}
+  @media(max-width:760px){.auth-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -281,26 +322,28 @@
   <div class="navbar__in">
     <a href="#" class="brand">Glowa<small>Afiliadas</small></a>
     <nav><ul class="nlinks">
+      <li><a href="#o-glowa">Produto</a></li>
       <li><a href="#prova">Resultados</a></li>
       <li><a href="#simulador">Simulador</a></li>
       <li><a href="#sistema">O que você recebe</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul></nav>
-    <a href="#candidatar" class="ncta">Quero ser afiliada</a>
+    <a href="#candidatar" class="ncta">Quero me candidatar</a>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mmenu" id="mmenu" aria-hidden="true">
   <div class="mmenu__h"><span class="brand">Glowa</span><button class="mmenu__x" id="mclose" aria-label="Fechar menu">✕</button></div>
   <ul>
-    <li><a href="#prova">Resultados</a></li>
+    <li><a href="#o-glowa">Produto</a></li>
+      <li><a href="#prova">Resultados</a></li>
     <li><a href="#simulador">Simulador</a></li>
     <li><a href="#sistema">O que você recebe</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="#candidatar" class="btn">Quero ser afiliada</a>
+  <a href="#candidatar" class="btn">Quero me candidatar</a>
 </div>
 
 <!-- HERO -->
@@ -308,15 +351,20 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="pill rv"><i></i> venha ser afiliada GLOWA ♡</div>
+        <div class="pill rv"><i></i> programa de afiliadas · candidatura por análise ♡</div>
         <div class="logo rv" style="--d:100ms">Glow<b>a</b><small>Afiliadas</small></div>
-        <h1 class="rv" style="--d:200ms">Dinheiro entrando com um <em>mecanismo de vendas já validado.</em></h1>
-        <p class="lede rv" style="--d:300ms">Você recebe o sistema completo pronto: site exclusivo, playbook, grupo e suporte. É só indicar pra suas meninas e acompanhar as comissões caindo. Tem muito seguidor? A gente monta uma estratégia sob medida pra você vender todo dia. 💖</p>
+        <h1 class="rv" style="--d:200ms">A marca que influenciadoras <em>querem representar.</em></h1>
+        <p class="lede rv" style="--d:300ms">O GLOWA é o método de transformação feminina com mecanismo de vendas validado. Afiliadas com mais de 2 milhões de seguidores, inclusive modelos, já estão dentro. Se o seu perfil combina, você entra com site exclusivo, playbook e comissão em cada venda. 💖</p>
         <div class="btn-row rv" style="--d:400ms">
-          <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero ser afiliada</a>
+          <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero me candidatar</a>
           <a href="#simulador" class="btn btn--ghost">Simular meus ganhos</a>
         </div>
-        <p class="hero-sub rv" style="--d:500ms">Resposta em <b>menos de 24h</b> · a gente cuida de você de pertinho 💌</p>
+        <p class="hero-sub rv" style="--d:500ms">Analisamos cada perfil · resposta em <b>menos de 24h</b> 💌</p>
+        <div class="comm rv" style="--d:560ms">
+          <div><b>~R$ 27</b><span>por venda, em média</span></div>
+          <div><b>R$ 11 a R$ 92</b><span>nos prints, conforme o carrinho</span></div>
+          <div><b>R$ 57</b><span>o método, + bumps de R$ 39 e R$ 17</span></div>
+        </div>
       </div>
       <div class="hero-visual rv" style="--d:300ms">
         <div class="shot"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
@@ -328,6 +376,41 @@
 </section>
 
 <div class="mq" aria-hidden="true"><div class="mq__t" id="mq"></div></div>
+
+<!-- QUEM JÁ ESTÁ DENTRO -->
+<section class="auth" id="quem-esta-dentro">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow rv">Quem já está dentro</p>
+      <h2 class="title rv">Criadoras grandes já escolheram o GLOWA. <em>Seu perfil combina?</em></h2>
+    </div>
+    <div class="auth-grid">
+      <div class="auth-c rv"><b>+2M</b><span>de seguidores: já temos afiliadas com esse alcance</span></div>
+      <div class="auth-c rv" style="--d:90ms"><b>Modelos</b><span>e criadoras de beleza já vendem GLOWA</span></div>
+      <div class="auth-c rv" style="--d:180ms"><b>R$ 6k+</b><span>em um único dia, por uma afiliada</span></div>
+    </div>
+    <p class="auth-p rv">Não é pra qualquer perfil. A gente analisa cada candidatura pra manter o nível da marca, e quem entra recebe site exclusivo, playbook e estrutura completa pra vender.</p>
+    <div class="btn-row rv" style="justify-content:center"><a href="#" data-wa class="btn">Quero me candidatar →</a></div>
+  </div>
+</section>
+
+<!-- O QUE É O GLOWA -->
+<section class="prod" id="o-glowa">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow rv">O que suas seguidoras vão comprar</p>
+      <h2 class="title rv">O GLOWA é o método de <em>transformação feminina</em></h2>
+      <p class="lede rv">Um método completo de pele, cabelo, estilo, maquiagem e presença, em videoaulas e protocolos práticos dentro de uma área de membros. Pra mulher parar de se esconder e se sentir confiante no espelho.</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><b>R$ 57</b><span>valor do método pra cliente</span></div>
+      <div class="fact rv" style="--d:70ms"><b>+ R$ 39 · R$ 17</b><span>order bumps opcionais no pagamento</span></div>
+      <div class="fact rv" style="--d:140ms"><b>30 dias</b><span>de garantia, o que dá segurança pra indicar</span></div>
+      <div class="fact rv" style="--d:210ms"><b>Imediato</b><span>acesso pelo celular ou computador</span></div>
+    </div>
+    <p class="prod-p rv">É fácil de indicar porque a dor é real (autoestima, pele, rotina) e o preço é acessível. Você não vende um produto qualquer: vende uma transformação que suas meninas já querem, com bônus de skincare por tipo de pele, maquiagem rápida, receitas e comunidade.</p>
+  </div>
+</section>
 
 <!-- PROVA -->
 <section class="proof" id="prova">
@@ -347,6 +430,7 @@
       <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
     <p class="bigline rv"><strong>R$ 686</strong> em um dia com 35 vendas. E tem afiliada passando de <strong>R$ 6.000</strong> no mesmo período.</p>
+    <p class="proof-note rv">Nos prints, a comissão por venda vai de cerca de R$ 11 a mais de R$ 92, com média perto de R$ 27. Cada print é de um dia de uma afiliada: os resultados variam conforme o tamanho do perfil, a constância e a divulgação.</p>
   </div>
 </section>
 
@@ -396,7 +480,7 @@
     <!-- ESTRATÉGIA -->
     <div class="strat rv"><div class="strat-img"><img src="src/img/victoria%20secret.jpg" onerror="imgFb(this)" alt="Modelo loira em cadeira de backstage com robe rosa" loading="lazy"></div><div class="strat-txt">
       <p class="script">tem muito seguidor?</p>
-      <h3 class="strat-t">A gente monta uma <em>estratégia só sua</em> pra você vender todo dia, muitoooo. 💸</h3>
+      <h3 class="strat-t">A gente monta uma <em>estratégia só sua</em> pra você vender com constância, sem se desgastar. 💸</h3>
       <p class="strat-p">Quanto maior o seu público, maior o potencial. Você conta como é o seu perfil e a gente desenha o plano junto: o que postar, quando postar e como vender sem cansar a sua audiência.</p>
       <a href="#" data-wa class="btn">Quero minha estratégia →</a>
     </div></div>
@@ -464,8 +548,8 @@
       <h2 class="title rv">Do <em>“oi”</em> à primeira venda em 4 passinhos</h2>
     </div>
     <div class="steps">
-      <div class="step rv"><div class="step__n">1</div><div><h3>Chama a gente</h3><p>Manda um oi no WhatsApp com o link do seu perfil.</p></div></div>
-      <div class="step rv" style="--d:80ms"><div class="step__n">2</div><div><h3>Aceita o convite</h3><p>Entra pelo <a href="#" data-cakto target="_blank" rel="noopener">link de afiliação</a> e já fica com seu link de vendas.</p></div></div>
+      <div class="step rv"><div class="step__n">1</div><div><h3>Você se candidata</h3><p>Manda um oi no WhatsApp com o link do seu perfil. A gente analisa o encaixe.</p></div></div>
+      <div class="step rv" style="--d:80ms"><div class="step__n">2</div><div><h3>Aceita o convite</h3><p>Depois da conversa, você aceita o <a href="#" data-cakto target="_blank" rel="noopener">convite de afiliação</a> e já fica com seu link de vendas.</p></div></div>
       <div class="step rv" style="--d:160ms"><div class="step__n">3</div><div><h3>Recebe tudo</h3><p>Seu site exclusivo e o playbook de vendas.</p></div></div>
       <div class="step rv" style="--d:240ms"><div class="step__n">4</div><div><h3>Vende com a gente</h3><p>Entra no grupo e começa a ver as comissões. 💸</p></div></div>
     </div>
@@ -490,15 +574,15 @@
 <section class="cta stripes" id="candidatar">
   <div class="wrap">
     <div class="cta-box rv">
-      <p class="script">pronta pra brilhar?</p>
-      <h2 class="title">Vem vender GLOWA <em>com a gente do seu lado.</em></h2>
-      <p class="lede">É só chamar no WhatsApp. A mensagem já vai prontinha, é só enviar 💌</p>
+      <p class="script">faça parte do GLOWA</p>
+      <h2 class="title">Seu perfil combina com o <em>GLOWA?</em></h2>
+      <p class="lede">Candidate-se pelo WhatsApp: a mensagem já vai prontinha, é só enviar. Analisamos o seu perfil e respondemos em menos de 24h. 💌</p>
       <div class="msg"><small>Mensagem pronta</small><span id="msgPreview"></span></div>
       <div class="btn-row">
-        <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero ser afiliada</a>
-        <a href="#" data-cakto target="_blank" rel="noopener" class="btn btn--ghost">Aceitar convite</a>
+        <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero me candidatar</a>
       </div>
-      <p class="note">Resposta em <b>menos de 24h</b> · com muito carinho 💌</p>
+      <p class="note">Cada perfil é analisado com cuidado · resposta em <b>menos de 24h</b> 💌</p>
+      <p class="note note--s">Já conversou com a gente? <a href="#" data-cakto target="_blank" rel="noopener">Aceite seu convite de afiliação aqui</a></p>
     </div>
   </div>
 </section>
@@ -519,14 +603,20 @@
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a href="#" data-wa class="btn">Quero ser afiliada 💖</a></div>
+<div class="sticky" id="sticky"><a href="#" data-wa class="btn">Quero me candidatar 💖</a></div>
 <a href="#" data-wa class="fab" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
 
 <script>
   /* ====== CONFIG ====== */
   const WHATSAPP = "554796567823";
-  const MESSAGE = "Oi, tudo bem? 💖 Acabei de chegar pelo site de afiliadas do GLOWA e quero muito vender com vocês! Sou influencer e queria saber os próximos passos pra me afiliar 🌸✨";
+  const MESSAGE = "Oi, tudo bem? 💖 Acabei de vir pelo site de afiliadas do GLOWA e quero me candidatar pra vender com vocês! Sou influencer e queria saber os próximos passos 🌸✨";
   const CAKTO_INVITE = "https://app.cakto.com.br/affiliate/invite/d1a5edec-e555-4bdb-809c-db7954c337ce";
+  // ---- provas humanas (preencha quando tiver; se ficar vazio, a seção não aparece) ----
+  // {name:"Ana", handle:"@ana", niche:"skincare", followers:"18k", photo:"src/img/ana.jpg", quote:"..."}
+  const AFFILIATE_TESTIMONIALS = [];
+  const AFFILIATES_COUNT = null;      // ex: 120  -> mostra "+120 afiliadas ativas"
+  const GROUP_PRINT = "";             // ex: "src/img/grupo.jpg" (print real do grupo, nomes borrados)
+  const SITE_PREVIEW = "";            // ex: "src/img/site-afiliada.jpg" (site real de uma afiliada)
   const COMMISSION_PER_SALE = 27; // comissão média por venda (cerca de R$ 27)
 
   const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESSAGE);
@@ -535,7 +625,7 @@
   document.getElementById('msgPreview').textContent = MESSAGE;
 
   /* marquee */
-  const words = ["site exclusivo pra você","mecanismo de vendas validado","playbook pronto","grupo só de mulheres","suporte de verdade","você não vende sozinha"];
+  const words = ["+2 milhões de seguidores entre as afiliadas","modelos e criadoras já dentro","mecanismo de vendas validado","site exclusivo pra você","playbook de vendas","comissão em cada venda"];
   const row = words.map(w => `<span>${w}</span>`).join('');
   document.getElementById('mq').innerHTML = row + row;
 
@@ -616,6 +706,22 @@
     boxes.forEach(b=>b.addEventListener('change',upd));
   })();
 
+  /* provas humanas opcionais */
+  (function(){
+    const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    if (AFFILIATE_TESTIMONIALS.length){
+      const sec=document.createElement('section'); sec.className='tst'; sec.id='depoimentos';
+      sec.innerHTML='<div class="wrap"><div class="head center"><p class="eyebrow">Elas já vendem</p><h2 class="title">Afiliadas <em>de verdade</em></h2></div><div class="tst-grid">'+
+        AFFILIATE_TESTIMONIALS.map(t=>'<article class="tcard">'+(t.photo?'<img src="'+esc(t.photo)+'" onerror="imgFb(this)" alt="'+esc(t.name)+'" loading="lazy">':'')+'<p>“'+esc(t.quote)+'”</p><b>'+esc(t.name)+' <a>'+esc(t.handle||'')+'</a></b><small>'+esc([t.niche,t.followers&&(t.followers+' seguidores')].filter(Boolean).join(' · '))+'</small></article>').join('')+'</div></div>';
+      document.getElementById('sistema').before(sec);
+    }
+    if (AFFILIATES_COUNT){
+      const c=document.querySelector('.comm'); if(c) c.insertAdjacentHTML('beforeend','<div><b>+'+AFFILIATES_COUNT+'</b><span>afiliadas ativas no grupo</span></div>');
+    }
+    if (GROUP_PRINT){ const m=document.querySelector('[data-p="2"] .mock'); if(m) m.innerHTML='<img class="real" src="'+esc(GROUP_PRINT)+'" onerror="imgFb(this)" alt="Print do grupo de afiliadas" loading="lazy">'; }
+    if (SITE_PREVIEW){ const m=document.querySelector('[data-p="0"] .mock'); if(m) m.innerHTML='<img class="real" src="'+esc(SITE_PREVIEW)+'" onerror="imgFb(this)" alt="Site de uma afiliada GLOWA" loading="lazy">'; }
+  })();
+
   /* tabs */
   (function(){
     const btns = document.querySelectorAll('#tabs button'), panels = document.querySelectorAll('.panel');
@@ -627,6 +733,12 @@
 
   /* FAQ */
   const faqs = [
+    ["O GLOWA aceita qualquer perfil?","Não. A gente analisa o encaixe do seu conteúdo com beleza, autocuidado e lifestyle feminino pra manter o nível da marca. Já temos afiliadas com mais de 2 milhões de seguidores, inclusive modelos, e também perfis menores com boa constância."],
+    ["Quanto eu ganho por venda?","A comissão varia porque a cliente pode levar os order bumps na hora de pagar. Nos prints ela vai de cerca de R$ 11 a mais de R$ 90 por venda, com média perto de R$ 27. Você acompanha as vendas e comissões pelo app da Cakto."],
+    ["O que a cliente compra e por quanto?","O método GLOWA custa R$ 57 e vem com acesso imediato, bônus e garantia de 30 dias. Na hora de pagar ela ainda pode adicionar os order bumps de R$ 39 e R$ 17."],
+    ["Funciona com perfil pequeno?","Pode funcionar, sim. A gente olha o encaixe do seu conteúdo com beleza e autocuidado, não só o número de seguidores. O resultado depende do tamanho do público, da constância e da divulgação, e quanto maior a audiência, maior o potencial."],
+    ["Funciona se eu só posto reels de maquiagem?","Funciona. Reels de maquiagem, rotina e autocuidado combinam muito com o GLOWA. A gente te orienta a encaixar o link no formato que você já posta."],
+    ["Preciso aparecer na câmera?","Não necessariamente. Dá pra divulgar com stories de texto, enquetes, bastidores e o link no bio. A gente te ajuda a achar o formato que combina com o seu jeito."],
     ["Preciso ter muitos seguidores?","Não. O que importa é o perfil combinar com beleza, autocuidado ou lifestyle feminino e você ter consistência. Analisamos o conteúdo e o encaixe, não só o número."],
     ["Como recebo as comissões?","As vendas geradas pelo seu link geram comissão conforme as regras do programa. Você acompanha e recebe conforme o fluxo informado após a aprovação."],
     ["Vou ficar sozinha depois de entrar?","Não. Você entra no grupo de afiliadas, recebe o playbook de vendas e tem suporte. A ideia é que nenhuma afiliada se sinta perdida."],
