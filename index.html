@@ -361,8 +361,8 @@
         </div>
         <p class="hero-sub rv" style="--d:500ms">Analisamos cada perfil · resposta em <b>menos de 24h</b> 💌</p>
         <div class="comm rv" style="--d:560ms">
-          <div><b>~R$ 27</b><span>por venda, em média</span></div>
-          <div><b>R$ 11 a R$ 92</b><span>nos prints, conforme o carrinho</span></div>
+          <div><b>R$ 27,50</b><span>mínimo por venda</span></div>
+          <div><b>Sobe com os bumps</b><span>quanto mais ela leva, mais você ganha</span></div>
           <div><b>R$ 57</b><span>o método, + bumps de R$ 39 e R$ 17</span></div>
         </div>
       </div>
@@ -430,7 +430,7 @@
       <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
     <p class="bigline rv"><strong>R$ 686</strong> em um dia com 35 vendas. E tem afiliada passando de <strong>R$ 6.000</strong> no mesmo período.</p>
-    <p class="proof-note rv">Nos prints, a comissão por venda vai de cerca de R$ 11 a mais de R$ 92, com média perto de R$ 27. Cada print é de um dia de uma afiliada: os resultados variam conforme o tamanho do perfil, a constância e a divulgação.</p>
+    <p class="proof-note rv">A comissão mínima por venda é de R$ 27,50 e sobe quando a cliente leva os order bumps. Cada print é de um dia de uma afiliada: os resultados variam conforme o tamanho do perfil, a constância e a divulgação.</p>
   </div>
 </section>
 
@@ -453,20 +453,20 @@
         <div class="ctl"><label for="sd">Dias postando no mês <output id="od">30</output></label><input type="range" id="sd" min="5" max="30" value="30"></div>
       </div>
       <div class="res">
-        <small>Potencial no mês</small>
+        <small>No mês, a partir de</small>
         <div class="num"><span>R$</span><b id="total">0</b></div>
-        <p class="sub"><b id="vm">300</b> vendas no mês · ~R$ 27 por venda em média</p>
+        <p class="sub"><b id="vm">300</b> vendas no mês · a partir de R$ 27,50 por venda</p>
         <a href="#" data-wa class="btn">Quero esse resultado →</a>
       </div>
     </div>
-    <p class="disc">Simulação ilustrativa, calculada com a comissão média de cerca de R$ 27 por venda. Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
+    <p class="disc">Simulação ilustrativa, calculada com a comissão mínima de R$ 27,50 por venda (o valor sobe quando a cliente leva os order bumps). Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
 
     <!-- ORDER BUMPS -->
     <div class="bump rv">
       <div>
         <p class="eyebrow">Por que cada venda rende diferente</p>
         <h3 class="bump-t">Quanto mais ela leva, <em>mais você ganha.</em></h3>
-        <p class="bump-p">O método custa <b>R$ 57</b>, e na hora de pagar a cliente pode levar também os <b>order bumps</b> de <b>R$ 39</b> e <b>R$ 17</b>. Por isso a comissão varia bastante de uma venda pra outra: nos prints ela vai de uns R$ 11 até mais de R$ 90 por venda. A média fica em torno de R$ 27, quase R$ 30. Clica aí do lado e vê o carrinho crescendo 👉</p>
+        <p class="bump-p">O método custa <b>R$ 57</b>, e na hora de pagar a cliente pode levar também os <b>order bumps</b> de <b>R$ 39</b> e <b>R$ 17</b>. Por isso a comissão sobe de uma venda pra outra: o mínimo é <b>R$ 27,50</b> por venda, e quanto mais a cliente leva, mais você ganha. Clica aí do lado e vê o carrinho crescendo 👉</p>
       </div>
       <div class="cart" id="cart">
         <label class="cart__i is-locked"><input type="checkbox" checked disabled><span class="cart__n">Método GLOWA</span><b>R$ 57</b></label>
@@ -617,7 +617,7 @@
   const AFFILIATES_COUNT = null;      // ex: 120  -> mostra "+120 afiliadas ativas"
   const GROUP_PRINT = "";             // ex: "src/img/grupo.jpg" (print real do grupo, nomes borrados)
   const SITE_PREVIEW = "";            // ex: "src/img/site-afiliada.jpg" (site real de uma afiliada)
-  const COMMISSION_PER_SALE = 27; // comissão média por venda (cerca de R$ 27)
+  const COMMISSION_PER_SALE = 27.5; // comissão mínima por venda (R$ 27,50)
 
   const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESSAGE);
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
@@ -734,7 +734,7 @@
   /* FAQ */
   const faqs = [
     ["O GLOWA aceita qualquer perfil?","Não. A gente analisa o encaixe do seu conteúdo com beleza, autocuidado e lifestyle feminino pra manter o nível da marca. Já temos afiliadas com mais de 2 milhões de seguidores, inclusive modelos, e também perfis menores com boa constância."],
-    ["Quanto eu ganho por venda?","A comissão varia porque a cliente pode levar os order bumps na hora de pagar. Nos prints ela vai de cerca de R$ 11 a mais de R$ 90 por venda, com média perto de R$ 27. Você acompanha as vendas e comissões pelo app da Cakto."],
+    ["Quanto eu ganho por venda?","A comissão mínima é de R$ 27,50 por venda e sobe quando a cliente leva os order bumps na hora de pagar. Você acompanha as vendas e comissões pelo app da Cakto."],
     ["O que a cliente compra e por quanto?","O método GLOWA custa R$ 57 e vem com acesso imediato, bônus e garantia de 30 dias. Na hora de pagar ela ainda pode adicionar os order bumps de R$ 39 e R$ 17."],
     ["Funciona com perfil pequeno?","Pode funcionar, sim. A gente olha o encaixe do seu conteúdo com beleza e autocuidado, não só o número de seguidores. O resultado depende do tamanho do público, da constância e da divulgação, e quanto maior a audiência, maior o potencial."],
     ["Funciona se eu só posto reels de maquiagem?","Funciona. Reels de maquiagem, rotina e autocuidado combinam muito com o GLOWA. A gente te orienta a encaixar o link no formato que você já posta."],
