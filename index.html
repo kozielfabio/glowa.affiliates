@@ -238,6 +238,30 @@
     footer{padding-bottom:96px}
   }
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+  /* order bumps + estratégia */
+  .bump{max-width:880px;margin:44px auto 0;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,48px);align-items:center;background:#fff;border:1px solid var(--border);border-radius:34px;padding:clamp(24px,4vw,44px);box-shadow:0 24px 60px rgba(184,92,120,.14)}
+  .bump-t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.1;margin-top:10px}
+  .bump-t em{font-style:italic;font-weight:500;color:var(--pink-deep)}
+  .bump-p{margin-top:12px;font-size:14.5px;line-height:1.75;color:var(--ink-soft)}
+  .bump-p b{color:var(--pink-deep)}
+  .cart{background:linear-gradient(160deg,var(--pink-soft),var(--blush));border:1px solid var(--border);border-radius:26px;padding:18px;display:grid;gap:10px}
+  .cart__i{display:grid;grid-template-columns:22px 1fr auto;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:14px 16px;font-size:14px;font-weight:600;cursor:pointer;transition:.3s var(--ease)}
+  .cart__i input{accent-color:var(--pink-deep);width:20px;height:20px}
+  .cart__i b{color:var(--pink-deep);font-family:"Cormorant Garamond",serif;font-size:1.25rem}
+  .cart__i:hover{transform:translateX(4px)}
+  .cart__i:has(input:checked){border-color:var(--pink-deep);background:#fff;box-shadow:0 10px 24px rgba(184,92,120,.18)}
+  .cart__i.is-locked{cursor:default}.cart__i.is-locked:hover{transform:none}
+  .cart__t{display:flex;justify-content:space-between;align-items:baseline;padding:10px 6px 0;font-size:13px;font-weight:700;color:var(--ink-soft)}
+  .cart__t strong{font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+  .cart__h{text-align:center;font-size:12.5px;font-weight:700;color:var(--pink-deep);min-height:1.4em}
+  .strat{max-width:880px;margin:22px auto 0;text-align:center;background:linear-gradient(135deg,var(--pink-deep),var(--pink-mid));color:#fff;border-radius:34px;padding:clamp(28px,5vw,52px) clamp(20px,5vw,48px);box-shadow:0 30px 70px rgba(184,92,120,.35)}
+  .strat .script{color:#fff;opacity:.95}
+  .strat-t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.15;margin:8px auto 0;max-width:620px;text-wrap:balance}
+  .strat-t em{font-style:italic;font-weight:500}
+  .strat-p{margin:14px auto 0;max-width:560px;font-size:15px;line-height:1.7;opacity:.95}
+  .strat .btn{margin-top:24px;background:#fff;color:var(--pink-deep);box-shadow:0 14px 30px rgba(42,31,36,.25)}
+  @media(max-width:760px){.bump{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -274,15 +298,15 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="pill rv"><i></i> Vagas abertas · programa de afiliadas</div>
+        <div class="pill rv"><i></i> venha ser afiliada GLOWA ♡</div>
         <div class="logo rv" style="--d:100ms">Glow<b>a</b><small>Afiliadas</small></div>
         <h1 class="rv" style="--d:200ms">Dinheiro entrando com um <em>mecanismo de vendas já validado.</em></h1>
-        <p class="lede rv" style="--d:300ms">Você recebe o sistema completo pronto: site exclusivo, playbook, grupo e suporte. É só indicar pra suas meninas e acompanhar as comissões caindo. 💖</p>
+        <p class="lede rv" style="--d:300ms">Você recebe o sistema completo pronto: site exclusivo, playbook, grupo e suporte. É só indicar pra suas meninas e acompanhar as comissões caindo. Tem muito seguidor? A gente monta uma estratégia sob medida pra você vender todo dia. 💖</p>
         <div class="btn-row rv" style="--d:400ms">
           <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero ser afiliada</a>
           <a href="#simulador" class="btn btn--ghost">Simular meus ganhos</a>
         </div>
-        <p class="hero-sub rv" style="--d:500ms">Resposta em <b>menos de 24h</b> · vagas limitadas pra manter o suporte</p>
+        <p class="hero-sub rv" style="--d:500ms">Resposta em <b>menos de 24h</b> · a gente cuida de você de pertinho 💌</p>
       </div>
       <div class="hero-visual rv" style="--d:300ms">
         <div class="shot"><img src="receitacakto.jpg" onerror="imgFb(this)" alt="Painel mostrando R$ 6.009,95 em vendas realizadas no dia"></div>
@@ -337,11 +361,35 @@
       <div class="res">
         <small>Potencial no mês</small>
         <div class="num"><span>R$</span><b id="total">0</b></div>
-        <p class="sub"><b id="vm">300</b> vendas no mês · ~R$ 27 por venda</p>
+        <p class="sub"><b id="vm">300</b> vendas no mês · ~R$ 27 por venda em média</p>
         <a href="#" data-wa class="btn">Quero esse resultado →</a>
       </div>
     </div>
     <p class="disc">Simulação ilustrativa, calculada com a comissão média de cerca de R$ 27 por venda. Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
+
+    <!-- ORDER BUMPS -->
+    <div class="bump rv">
+      <div>
+        <p class="eyebrow">Por que cada venda rende diferente</p>
+        <h3 class="bump-t">Quanto mais ela leva, <em>mais você ganha.</em></h3>
+        <p class="bump-p">O método custa <b>R$ 57</b>, e na hora de pagar a cliente pode levar também os <b>order bumps</b> de <b>R$ 39</b> e <b>R$ 17</b>. Por isso a comissão varia bastante de uma venda pra outra: nos prints ela vai de uns R$ 11 até mais de R$ 90 por venda. A média fica em torno de R$ 27, quase R$ 30. Clica aí do lado e vê o carrinho crescendo 👉</p>
+      </div>
+      <div class="cart" id="cart">
+        <label class="cart__i is-locked"><input type="checkbox" checked disabled><span class="cart__n">Método GLOWA</span><b>R$ 57</b></label>
+        <label class="cart__i"><input type="checkbox" data-p="39"><span class="cart__n">Order bump 1</span><b>+ R$ 39</b></label>
+        <label class="cart__i"><input type="checkbox" data-p="17"><span class="cart__n">Order bump 2</span><b>+ R$ 17</b></label>
+        <div class="cart__t"><span>Cliente paga</span><strong>R$ <span id="cartTotal">57</span></strong></div>
+        <p class="cart__h" id="cartHint">Só o método: venda simples ✨</p>
+      </div>
+    </div>
+
+    <!-- ESTRATÉGIA -->
+    <div class="strat rv">
+      <p class="script">tem muito seguidor?</p>
+      <h3 class="strat-t">A gente monta uma <em>estratégia só sua</em> pra você vender todo dia, muitoooo. 💸</h3>
+      <p class="strat-p">Quanto maior o seu público, maior o potencial. Você conta como é o seu perfil e a gente desenha o plano junto: o que postar, quando postar e como vender sem cansar a sua audiência.</p>
+      <a href="#" data-wa class="btn">Quero minha estratégia →</a>
+    </div>
   </div>
 </section>
 
@@ -426,7 +474,7 @@
         <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero ser afiliada</a>
         <a href="#" data-cakto target="_blank" rel="noopener" class="btn btn--ghost">Aceitar convite</a>
       </div>
-      <p class="note">Resposta em <b>menos de 24h</b> · vagas limitadas</p>
+      <p class="note">Resposta em <b>menos de 24h</b> · com muito carinho 💌</p>
     </div>
   </div>
 </section>
@@ -530,6 +578,18 @@
     }));
     new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { update(); o.disconnect(); } }, { threshold: .3 }).observe(document.querySelector('.sim-card'));
     paint(sv); paint(sd);
+  })();
+
+  /* order bumps */
+  (function(){
+    const cart=document.getElementById('cart'); if(!cart) return;
+    const totalEl=document.getElementById('cartTotal'), hint=document.getElementById('cartHint');
+    const boxes=cart.querySelectorAll('input[data-p]');
+    const msgs=['Só o método: venda simples ✨','Com 1 bump, a comissão já sobe 💖','Carrinho cheio: venda turbinada! 🚀'];
+    let shown=57,raf=0;
+    function go(t){cancelAnimationFrame(raf);const f=shown,t0=performance.now();(function st(n){const p=Math.min(1,(n-t0)/400);shown=f+(t-f)*(1-Math.pow(1-p,3));totalEl.textContent=Math.round(shown);if(p<1)raf=requestAnimationFrame(st)})(t0)}
+    function upd(){let sum=57,c=0;boxes.forEach(b=>{if(b.checked){sum+=+b.dataset.p;c++}});go(sum);hint.textContent=msgs[c]}
+    boxes.forEach(b=>b.addEventListener('change',upd));
   })();
 
   /* tabs */
