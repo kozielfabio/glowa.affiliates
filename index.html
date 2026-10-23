@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.classList.add('js');function imgFb(i){var b=['src/img/','','images/','img/'],f=i.dataset.f||i.getAttribute('src').split('/').pop();i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
+<script>document.documentElement.classList.add('js');function imgFb(i){var b=['src/img/','','images/','img/','src/images/','assets/','src/'],f=i.dataset.f||i.getAttribute('src').split('/').pop();i.dataset.f=f;var n=(+i.dataset.n||0)+1;if(n<b.length){i.dataset.n=n;i.src=b[n]+f}else{i.onerror=null}}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLOWA Afiliadas | A marca que influenciadoras querem representar</title>
@@ -74,8 +74,9 @@
   .mmenu__x{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:16px}
   .mmenu ul{list-style:none;margin-block:auto}
   .mmenu li a{display:block;padding:15px 0;font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,8vw,2.4rem);font-weight:600;border-bottom:1px solid var(--border)}
-  @media(max-width:1000px){.nlinks,.ncta{display:none}.burger{display:flex}}
-  @media(min-width:1001px){.mmenu{display:none}}
+  @media(max-width:1300px){.nlinks,.ncta{display:none}.burger{display:flex}}
+  @media(min-width:1301px){.mmenu{display:none}}
+  @media(min-width:1301px) and (max-width:1440px){.nlinks{gap:18px}.nlinks a{letter-spacing:.08em}.ncta{padding:11px 16px}}
 
   /* hero */
   .hero{padding:120px 0 70px;min-height:92svh;display:flex;align-items:center}
@@ -131,8 +132,8 @@
   .slide{flex:0 0 auto;scroll-snap-align:center;background:var(--blush);border:1px solid var(--border);border-radius:26px;padding:14px;box-shadow:0 14px 40px rgba(184,92,120,.1);transition:transform .45s var(--ease),box-shadow .4s}
   .slide:hover{transform:translateY(-6px);box-shadow:0 28px 56px rgba(184,92,120,.2)}
   .slide .fr{background:#121212;border-radius:18px;overflow:hidden;line-height:0;box-shadow:0 10px 28px rgba(42,31,36,.18)}
-  .slide img{height:clamp(300px,68vw,440px);width:auto;max-width:none;display:block;pointer-events:none;-webkit-user-drag:none}
-  .slide video{height:clamp(300px,68vw,440px);width:auto;aspect-ratio:9/16;max-width:none;display:block;object-fit:contain;background:#121212;pointer-events:none}
+  .slide{--ch:clamp(300px,68vw,440px)}
+  .slide img{height:var(--ch);width:auto;max-width:none;display:block;pointer-events:none;-webkit-user-drag:none}
   .slide p{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);padding:12px 6px 4px;display:flex;gap:8px;align-items:center}
   .slide p::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink-deep)}
   .car__nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
@@ -444,9 +445,55 @@
   .mdl__n button{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--pink-deep);font-size:17px;cursor:pointer;transition:.25s}
   .mdl__n button:hover{background:var(--pink-deep);color:#fff}
   @media(max-width:700px){.mdl__c{grid-template-columns:1fr}.mdl__c img{max-width:230px;margin-inline:auto}}
+
+  /* ===== capas dos módulos: proporção 2:3, nunca cortam ===== */
+  .mc__img{aspect-ratio:2/3;background:linear-gradient(160deg,#6b2b45,#2A1F24)}
+  .mc__img img{width:100%;height:100%;object-fit:cover}
+  .mdl__c img{aspect-ratio:2/3;object-fit:cover;background:var(--pink-soft)}
+
+  /* ===== vídeo de vendas: moldura de iPhone 17 Pro Max (1320 x 2868) ===== */
+  .slide--phone .fr{--r:.46025;position:relative;height:var(--ch);width:calc((var(--ch) - 10px) * var(--r) + 10px);border:5px solid #0c0c0f;border-radius:clamp(26px,3.4vh,38px);background:#000;box-shadow:0 0 0 1.5px rgba(201,168,124,.55),0 18px 40px rgba(42,31,36,.35)}
+  .slide--phone .fr::after{content:"";position:absolute;top:2.1%;left:50%;width:26%;height:2.5%;transform:translateX(-50%);background:#000;border-radius:99px;z-index:2;pointer-events:none}
+  .slide video{display:block;width:100%;height:100%;object-fit:cover;background:#000;pointer-events:none}
+
+  /* ===== acabamento GLOWA (detalhes minimalistas) ===== */
+  .nlinks a,.ncta{white-space:nowrap}
+  ::selection{background:var(--pink);color:#fff}
+  html{scrollbar-width:thin;scrollbar-color:var(--pink) var(--blush)}
+  body{font-kerning:normal;font-feature-settings:"kern","liga";text-rendering:optimizeLegibility}
+  .title{letter-spacing:-.014em}
+  /* título com brilho dourado sutil */
+  .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink-deep) 25%,#e58aa6 42%,var(--gold) 52%,#e58aa6 62%,var(--pink-deep) 80%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gshine 8s ease-in-out infinite}
+  .auth .title em:not(:has(.gl)),.mem .title em:not(:has(.gl)){background-image:linear-gradient(100deg,var(--pink) 25%,#fff 45%,var(--gold-l) 55%,var(--pink) 78%)}
+  @keyframes gshine{0%,35%{background-position:100% 0}70%,100%{background-position:0 0}}
+  /* ornamento fino nos títulos de seção */
+  .head.center .eyebrow{display:inline-flex;align-items:center;gap:14px}
+  .head.center .eyebrow::before{content:"";width:32px;height:1px;background:linear-gradient(270deg,var(--gold),transparent)}
+  .head.center .eyebrow::after{content:"";width:32px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+  /* revelação com desfoque suave nos títulos */
+  .js .title.rv,.js .hero h1.rv,.js .logo.rv{filter:blur(7px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--d,0ms)}
+  .js .title.rv.in,.js .hero h1.rv.in,.js .logo.rv.in{filter:none}
+  .js .hero .rv{transition-delay:calc(var(--d,0ms) + 950ms)}
+  /* linha dourada fina na barra de navegação */
+  .navbar.scrolled::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.65;pointer-events:none}
+  /* entrada: cortina rosa com a logo (só CSS, nunca trava o site) */
+  .veil{position:fixed;inset:0;z-index:400;display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 40%,#fff,var(--pink-soft));pointer-events:none;animation:veil 1.7s var(--ease) .1s forwards}
+  .veil span{font-family:"Great Vibes",cursive;font-size:clamp(4.6rem,18vw,8rem);line-height:1;color:var(--ink);animation:veilLogo 1.7s var(--ease) .1s forwards}
+  .veil span b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 30px rgba(224,122,150,.6)}
+  @keyframes veil{0%,62%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+  @keyframes veilLogo{0%{opacity:0;transform:scale(.94);filter:blur(8px)}35%,62%{opacity:1;transform:none;filter:none}100%{opacity:0;transform:scale(1.06)}}
+  /* brilhos no topo */
+  .spk{position:absolute;color:var(--gold);pointer-events:none;z-index:1;animation:twk 3.6s ease-in-out infinite}
+  @keyframes twk{0%,100%{opacity:.15;transform:scale(.7) rotate(0)}50%{opacity:.95;transform:scale(1.15) rotate(18deg)}}
+  /* halo que acompanha o mouse (só desktop) */
+  .halo{position:fixed;left:0;top:0;width:440px;height:440px;margin:-220px 0 0 -220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(232,160,181,.26),transparent 66%);opacity:0;transition:opacity .6s;will-change:transform}
+  .halo.on{opacity:1}
+  @media(hover:none),(pointer:coarse){.halo{display:none}}
 </style>
 </head>
 <body>
+<div class="veil" aria-hidden="true"><span>Glow<b>a</b></span></div>
+<div class="halo" id="halo" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="navbar" id="navbar">
@@ -602,7 +649,7 @@
       <div class="mrow" id="rVip">
         <div class="mrow__h"><div><h4>Comunidade VIP 💬</h4><small>Onde todo mundo se acolhe</small></div></div>
         <div class="mvip">
-          <button class="mc" data-open="8" style="width:100%"><span class="mc__img"><img src="src/img/bonus-vip.jpg" onerror="imgFb(this)" alt="Capa do bônus Grupo VIP" loading="lazy"></span></button>
+          <button class="mc" data-open="8" style="width:100%"><span class="mc__img"><img src="src/img/09.jpeg" onerror="imgFb(this)" alt="Capa do bônus Grupo VIP" width="1024" height="1536" decoding="async"></span></button>
           <div>
             <p class="eyebrow">Bônus Grupo VIP</p>
             <h4>Uma comunidade onde todo mundo se acolhe</h4>
@@ -651,7 +698,7 @@
     </div>
     <div class="car rv">
       <div class="car__track" id="track">
-        <figure class="slide"><div class="fr"><video class="vsale" src="src/img/vendasvideo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo mostrando as vendas de uma afiliada GLOWA"></video></div><p>Vendas de uma afiliada</p></figure>
+        <figure class="slide slide--phone"><div class="fr phone" id="phoneFr"><video class="vsale" src="src/img/vendasvideo.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-label="Vídeo mostrando as vendas de uma afiliada GLOWA"></video></div><p>Vendas de uma afiliada</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
@@ -892,7 +939,7 @@
   burger.onclick = () => setM(true); document.getElementById('mclose').onclick = () => setM(false);
   mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setM(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setM(false); });
-  addEventListener('resize', () => { if (innerWidth > 1000) setM(false); });
+  addEventListener('resize', () => { if (innerWidth > 1300) setM(false); });
 
   /* reveal */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08, rootMargin: '0px 0px -30px 0px' });
@@ -1052,19 +1099,19 @@ pF.addEventListener('input',up);pH.addEventListener('input',up);up();
 /* ===== ÁREA DE MEMBROS ===== */
 (function(){try{
 const ITEMS=[
- {img:'modulo1.jpg',e:'Módulo 1',t:'Antropometria e Fenótipos',d:'Comece entendendo suas proporções e o seu fenótipo, a base pra fazer escolhas que realmente valorizam você.',l:['Leitura das suas proporções','Entendendo o seu fenótipo','A base de todos os outros módulos']},
- {img:'modulo2.jpg',e:'Módulo 2',t:'Cabelo, Harmonia e Volume',d:'Cabelo que combina com a sua estrutura: harmonia com o rosto, volume e movimento.',l:['Cabelo e harmonia facial','Volume e movimento','Escolhas que valorizam']},
- {img:'modulo3.jpg',e:'Módulo 3',t:'Olhar, Sobrancelha e Maquiagem',d:'Do olhar à maquiagem completa: aprenda a realçar o que já é seu.',l:['Olhar e sobrancelha','Maquiagem que favorece','Realce sem exagero']},
- {img:'modulo4.jpg',e:'Módulo 4',t:'Ossos, Desenvolvimento e Hormônios',d:'Entenda a estrutura por trás da sua aparência e como ela se desenvolve.',l:['Estrutura e desenvolvimento','Conhecimento pra se enxergar melhor','Conteúdo explicado de forma leve']},
- {img:'modulo5.jpg',e:'Módulo 5',t:'Corpo, Rosto e Composição',d:'Como corpo e rosto se combinam numa composição harmônica e o que fazer com isso.',l:['Corpo e rosto em conjunto','Composição e equilíbrio','Aplicação no dia a dia']},
- {img:'modulo6.jpg',e:'Módulo 6',t:'Pele, Ácidos e Rotina',d:'Monte uma rotina de skincare que faz sentido pra sua pele, entendendo o papel dos ácidos.',l:['Rotina de pele passo a passo','Ácidos sem medo','Constância que dá resultado']},
- {img:'modulo7.jpg',e:'Módulo 7',t:'Presença, Comunicação e Autoridade',d:'Presença que se sente: como se comunicar e ocupar o seu lugar com confiança.',l:['Presença e postura','Comunicação com confiança','Autoridade com leveza']},
- {img:'modulo8.jpg',e:'Módulo 8',t:'Manifestação',d:'O fechamento da jornada: visualizar, decidir e sustentar a mulher que você quer ser.',l:['Clareza do que você quer','Hábitos que sustentam','Seguir no seu ritmo']},
- {img:'bonus-vip.jpg',e:'Bônus',t:'Grupo VIP',d:'Uma comunidade ativa onde todo mundo se acolhe, troca ideia e cresce junto.',l:['Comunidade acolhedora','Troca entre mulheres','Apoio na sua jornada']},
- {img:'bonus-receitas.jpg',e:'Bônus',t:'Receitas Saudáveis',d:'Receitas práticas e gostosas pra acompanhar a sua rotina de autocuidado.',l:['Receitas fáceis de fazer','Pra rotina corrida','Sabor e leveza']}
+ {img:'01.jpeg',e:'Módulo 1',t:'Antropometria e Fenótipos',d:'Comece entendendo suas proporções e o seu fenótipo, a base pra fazer escolhas que realmente valorizam você.',l:['Leitura das suas proporções','Entendendo o seu fenótipo','A base de todos os outros módulos']},
+ {img:'02.jpeg',e:'Módulo 2',t:'Cabelo, Harmonia e Volume',d:'Cabelo que combina com a sua estrutura: harmonia com o rosto, volume e movimento.',l:['Cabelo e harmonia facial','Volume e movimento','Escolhas que valorizam']},
+ {img:'03.jpeg',e:'Módulo 3',t:'Olhar, Sobrancelha e Maquiagem',d:'Do olhar à maquiagem completa: aprenda a realçar o que já é seu.',l:['Olhar e sobrancelha','Maquiagem que favorece','Realce sem exagero']},
+ {img:'04.jpeg',e:'Módulo 4',t:'Ossos, Desenvolvimento e Hormônios',d:'Entenda a estrutura por trás da sua aparência e como ela se desenvolve.',l:['Estrutura e desenvolvimento','Conhecimento pra se enxergar melhor','Conteúdo explicado de forma leve']},
+ {img:'05.jpeg',e:'Módulo 5',t:'Corpo, Rosto e Composição',d:'Como corpo e rosto se combinam numa composição harmônica e o que fazer com isso.',l:['Corpo e rosto em conjunto','Composição e equilíbrio','Aplicação no dia a dia']},
+ {img:'06.jpeg',e:'Módulo 6',t:'Pele, Ácidos e Rotina',d:'Monte uma rotina de skincare que faz sentido pra sua pele, entendendo o papel dos ácidos.',l:['Rotina de pele passo a passo','Ácidos sem medo','Constância que dá resultado']},
+ {img:'07.jpeg',e:'Módulo 7',t:'Presença, Comunicação e Autoridade',d:'Presença que se sente: como se comunicar e ocupar o seu lugar com confiança.',l:['Presença e postura','Comunicação com confiança','Autoridade com leveza']},
+ {img:'08.jpeg',e:'Módulo 8',t:'Manifestação',d:'O fechamento da jornada: visualizar, decidir e sustentar a mulher que você quer ser.',l:['Clareza do que você quer','Hábitos que sustentam','Seguir no seu ritmo']},
+ {img:'09.jpeg',e:'Bônus',t:'Grupo VIP',d:'Uma comunidade ativa onde todo mundo se acolhe, troca ideia e cresce junto.',l:['Comunidade acolhedora','Troca entre mulheres','Apoio na sua jornada']},
+ {img:'10.jpeg',e:'Bônus',t:'Receitas Saudáveis',d:'Receitas práticas e gostosas pra acompanhar a sua rotina de autocuidado.',l:['Receitas fáceis de fazer','Pra rotina corrida','Sabor e leveza']}
 ];
 const alts=ITEMS.map(i=>'Capa: '+i.e+' '+i.t);
-function card(i){const it=ITEMS[i];return '<button class="mc" data-open="'+i+'" aria-label="Ver prévia: '+it.e+' '+it.t+'"><span class="mc__img"><img src="src/img/'+it.img+'" onerror="imgFb(this)" alt="'+alts[i]+'" loading="lazy" draggable="false"></span></button>'}
+function card(i){const it=ITEMS[i];return '<button class="mc" data-open="'+i+'" aria-label="Ver prévia: '+it.e+' '+it.t+'"><span class="mc__img"><img src="src/img/'+it.img+'" onerror="imgFb(this)" alt="'+alts[i]+'" width="1024" height="1536" decoding="async" draggable="false"></span></button>'}
 const mods=document.getElementById('cvMods'),bon=document.getElementById('cvBon');
 for(let i=0;i<8;i++)mods.insertAdjacentHTML('beforeend',card(i));
 [8,9].forEach(i=>bon.insertAdjacentHTML('beforeend',card(i)));
@@ -1112,7 +1159,27 @@ document.querySelectorAll('#membros [data-wa],#mdl [data-wa]').forEach(a=>{a.hre
 <script>
 /* vídeo de vendas: toca só quando aparece na tela */
 (function(){const v=document.querySelector('.vsale');if(!v)return;v.muted=true;
+ const fr=document.getElementById('phoneFr');
+ const fit=()=>{if(fr&&v.videoWidth&&v.videoHeight)fr.style.setProperty('--r',(v.videoWidth/v.videoHeight).toFixed(5))};
+ v.addEventListener('loadedmetadata',fit);if(v.readyState>=1)fit();
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const p=v.play();if(p&&p.catch)p.catch(()=>{})}else v.pause()}),{threshold:.35});io.observe(v)})();
+</script>
+
+<script>
+/* acabamento: brilhos no topo + halo do mouse */
+(function(){try{
+ const hero=document.querySelector('.hero');
+ if(hero&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  [[8,18,16,0],[90,12,22,.9],[14,70,12,1.7],[82,64,15,2.4],[48,6,11,1.2],[60,88,13,.4]].forEach(p=>{const i=document.createElement('i');i.className='spk';i.textContent='✦';i.style.cssText='left:'+p[0]+'%;top:'+p[1]+'%;font-size:'+p[2]+'px;animation-delay:'+p[3]+'s;font-style:normal';hero.appendChild(i)});
+ }
+ const h=document.getElementById('halo');
+ if(h&&matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  let x=innerWidth/2,y=innerHeight/2,tx=x,ty=y,raf=0;
+  const loop=()=>{x+=(tx-x)*.12;y+=(ty-y)*.12;h.style.transform='translate3d('+x+'px,'+y+'px,0)';raf=(Math.abs(tx-x)+Math.abs(ty-y)>.5)?requestAnimationFrame(loop):0};
+  addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY;h.classList.add('on');if(!raf)raf=requestAnimationFrame(loop)},{passive:true});
+  document.addEventListener('pointerleave',()=>h.classList.remove('on'));
+ }
+}catch(e){console.error('GLOWA acabamento:',e)}})();
 </script>
 </body>
 </html>
