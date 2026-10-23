@@ -74,9 +74,8 @@
   .mmenu__x{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:16px}
   .mmenu ul{list-style:none;margin-block:auto}
   .mmenu li a{display:block;padding:15px 0;font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,8vw,2.4rem);font-weight:600;border-bottom:1px solid var(--border)}
-  @media(max-width:1300px){.nlinks,.ncta{display:none}.burger{display:flex}}
-  @media(min-width:1301px){.mmenu{display:none}}
-  @media(min-width:1301px) and (max-width:1440px){.nlinks{gap:18px}.nlinks a{letter-spacing:.08em}.ncta{padding:11px 16px}}
+  @media(max-width:900px){.nlinks,.ncta{display:none}.burger{display:flex}}
+  @media(min-width:901px){.mmenu{display:none}}
 
   /* hero */
   .hero{padding:120px 0 70px;min-height:92svh;display:flex;align-items:center}
@@ -86,7 +85,6 @@
   .pill{display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.8);color:var(--pink-deep);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
   .pill i{width:7px;height:7px;border-radius:50%;background:var(--pink-deep);animation:pulse 1.6s ease-in-out infinite}
   @keyframes pulse{50%{opacity:.4;transform:scale(.8)}}
-  .vip{display:inline-flex;align-items:center;margin:8px 8px 0 0;padding:9px 16px;border-radius:999px;background:linear-gradient(135deg,#2A1F24,#4a343d);color:var(--gold-l);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--gold)}
   .logo{font-family:"Great Vibes",cursive;font-size:clamp(4.4rem,11vw,7.4rem);line-height:1;margin-top:18px}
   .logo b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 28px rgba(224,122,150,.55);animation:glow 2.8s ease-in-out infinite alternate}
   .logo small{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(1rem,2.4vw,1.4rem);letter-spacing:.42em;text-transform:uppercase;color:var(--pink-deep);font-weight:500;margin-top:-4px}
@@ -107,21 +105,9 @@
   @media(max-width:860px){.hero{padding-top:104px}.hero-grid{grid-template-columns:1fr;text-align:center}.hero .lede{margin-inline:auto}.hero .btn-row{justify-content:center}.hero-visual{max-width:300px}.hero-visual .tag{left:-8px}.hero-visual .tag2{right:-6px}}
 
   /* marquee */
-  .mq{background:var(--ink);color:#fff;padding:15px 0;overflow:hidden;white-space:nowrap}
-  .mq__t{display:inline-flex;gap:36px;padding-left:36px;animation:mq 32s linear infinite;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem}
-  .mq__t span::after{content:"✦";color:var(--pink);margin-left:36px;font-style:normal;font-size:.85rem}
   @keyframes mq{to{transform:translateX(-50%)}}
 
   /* ledger (novo) */
-  .ledger{background:var(--ink);padding-block:clamp(40px,5vw,64px);color:#fff}
-  .ledger::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 50% 0,rgba(201,168,124,.22),transparent 70%)}
-  .led-t{text-align:center;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
-  .led-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .led{text-align:center;padding:26px 14px;border:1px solid rgba(201,168,124,.35);border-radius:24px;background:rgba(255,255,255,.04);transition:transform .3s var(--ease)}
-  .led b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2rem,4.4vw,3.3rem);line-height:1;background:linear-gradient(180deg,var(--gold-l),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-variant-numeric:tabular-nums}
-  .led span{display:block;margin-top:10px;font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.75)}
-  .led-n{text-align:center;font-size:11.5px;color:rgba(255,255,255,.5);margin-top:18px}
-  @media(max-width:760px){.led-grid{grid-template-columns:1fr 1fr}}
 
   /* proof carousel */
   .proof{background:#fff}
@@ -164,56 +150,15 @@
   @media(max-width:760px){.sim-card{grid-template-columns:1fr}}
 
   /* curadoria (novo) */
-  .cur{background:linear-gradient(180deg,#fff,var(--blush))}
-  .cur-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
-  .crit{display:grid;gap:12px;margin-top:22px}
-  .crit div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;padding:14px 16px;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:18px;box-shadow:0 8px 24px rgba(184,92,120,.08)}
-  .crit i{font-style:normal;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(160deg,var(--pink),var(--pink-deep));color:#fff;font-size:18px}
-  .crit b{display:block;font-size:14px}.crit span{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
   .pre{background:#fff;border:1px solid var(--gold);border-radius:34px;padding:clamp(24px,4vw,40px);box-shadow:0 0 0 9px rgba(201,168,124,.12),0 40px 90px rgba(184,92,120,.2)}
   .pre h3{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;line-height:1.1}
   .pre .s{font-size:13px;color:var(--ink-muted);margin:6px 0 18px}
   .pre input[type=text]{width:100%;padding:15px 18px;border:1.5px solid var(--border);border-radius:16px;font:600 15px Manrope,sans-serif;background:var(--blush);color:var(--ink);margin-bottom:16px}
   .pre input[type=text]:focus{outline:2px solid var(--pink-deep);background:#fff}
   .tier{display:inline-block;margin:2px 0 16px;padding:7px 14px;border-radius:999px;background:linear-gradient(135deg,#2A1F24,#4a343d);color:var(--gold-l);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-  @media(max-width:860px){.cur-grid{grid-template-columns:1fr}}
 
   /* system tabs */
-  .sys{background:#fff}
-  .tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;justify-content:center;margin-bottom:26px;padding:4px}
-  .tabs::-webkit-scrollbar{display:none}
-  .tabs button{flex-shrink:0;border:1px solid var(--border);background:var(--blush);color:var(--ink-soft);font-weight:700;font-size:13px;padding:12px 20px;border-radius:999px;cursor:pointer;transition:.3s var(--ease)}
-  .tabs button.on{background:linear-gradient(180deg,var(--pink-mid),var(--pink-deep));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(184,92,120,.32)}
-  .panel{display:none;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;max-width:960px;margin-inline:auto;background:var(--blush);border:1px solid var(--border);border-radius:34px;padding:clamp(24px,4vw,48px)}
-  .panel.on{display:grid;animation:pin .6s var(--ease)}
   @keyframes pin{from{opacity:0;transform:translateY(14px)}}
-  .panel h3{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;line-height:1.1}
-  .panel p{margin-top:12px;font-size:15px;line-height:1.7;color:var(--ink-soft)}
-  .panel ul{list-style:none;margin-top:16px;display:grid;gap:9px}
-  .panel li{display:flex;gap:10px;font-size:14px;font-weight:600}
-  .panel li::before{content:"♥";color:var(--pink-mid);font-size:12px;margin-top:3px}
-  .mock{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 60px rgba(184,92,120,.18);overflow:hidden}
-  .mock__bar{display:flex;gap:6px;padding:12px 14px;background:var(--pink-soft)}
-  .mock__bar i{width:9px;height:9px;border-radius:50%;background:var(--pink)}
-  .mock__body{padding:22px 20px;text-align:center}
-  .mock__logo{font-family:"Great Vibes",cursive;font-size:2.6rem;line-height:1}
-  .mock__logo b{font-weight:400;color:var(--pink-deep)}
-  .mock__h{font-family:"Cormorant Garamond",serif;font-size:1.25rem;margin:8px 0 14px}
-  .mock__b{display:inline-block;background:var(--pink-deep);color:#fff;border-radius:99px;padding:10px 22px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-  .mock__u{font-size:11px;color:var(--ink-muted);margin-top:14px}.mock__u b{color:var(--pink-deep)}
-  .chk{display:grid;gap:10px;padding:18px;text-align:left}
-  .chk label{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1px solid var(--border);border-radius:14px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.3s}
-  .chk input{accent-color:var(--pink-deep);width:18px;height:18px}
-  .chk label:has(input:checked){background:var(--pink-soft);border-color:var(--pink-mid);text-decoration:line-through;text-decoration-color:var(--pink);color:var(--ink-muted)}
-  .chat{padding:18px;display:grid;gap:10px}
-  .bub{max-width:82%;padding:11px 15px;border-radius:18px 18px 18px 5px;background:var(--pink-soft);font-size:13px;line-height:1.5}
-  .bub.me{justify-self:end;background:var(--pink-deep);color:#fff;border-radius:18px 18px 5px 18px}
-  .chat small{text-align:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);font-weight:700}
-  .sup{padding:22px;display:grid;gap:14px;text-align:left}
-  .sup div{display:flex;gap:14px;align-items:center}
-  .sup span{flex-shrink:0;width:42px;height:42px;border-radius:50%;background:linear-gradient(160deg,var(--pink),var(--pink-deep));color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px}
-  .sup b{display:block;font-size:14px}.sup em{font-style:normal;font-size:12.5px;color:var(--ink-muted)}
-  @media(max-width:760px){.panel.on{grid-template-columns:1fr}.tabs{justify-content:flex-start}}
 
   /* steps */
   .how{background:var(--blush)}
@@ -286,23 +231,9 @@
   .cart__t{display:flex;justify-content:space-between;align-items:baseline;padding:10px 6px 0;font-size:13px;font-weight:700;color:var(--ink-soft)}
   .cart__t strong{font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
   .cart__h{text-align:center;font-size:12.5px;font-weight:700;color:var(--pink-deep);min-height:1.4em}
-  .strat{max-width:880px;margin:22px auto 0;text-align:center;background:linear-gradient(135deg,var(--pink-deep),var(--pink-mid));color:#fff;border-radius:34px;padding:clamp(28px,5vw,52px) clamp(20px,5vw,48px);box-shadow:0 30px 70px rgba(184,92,120,.35)}
-  .strat .script{color:#fff;opacity:.95}
-  .strat-t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.15;margin:8px auto 0;max-width:620px;text-wrap:balance}
-  .strat-t em{font-style:italic;font-weight:500}
-  .strat-p{margin:14px auto 0;max-width:560px;font-size:15px;line-height:1.7;opacity:.95}
-  .strat .btn{margin-top:24px;background:#fff;color:var(--pink-deep);box-shadow:0 14px 30px rgba(42,31,36,.25)}
   @media(max-width:760px){.bump{grid-template-columns:1fr}}
 
   /* fotos de modelo (tamanho natural, sem corte) */
-  .strat{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(22px,4vw,48px);align-items:center;text-align:left}
-  .strat-img img{width:100%;height:auto;border-radius:24px;border:4px solid rgba(255,255,255,.4);box-shadow:0 24px 50px rgba(42,31,36,.35)}
-  .strat-txt .strat-t,.strat-txt .strat-p{margin-left:0;margin-right:0}
-  @media(max-width:760px){.strat{grid-template-columns:1fr;text-align:center}.strat-img{max-width:280px;margin-inline:auto}.strat-txt .strat-t,.strat-txt .strat-p{margin-inline:auto}}
-  .life{background:#fff}
-  .life-card{position:relative;max-width:980px;margin:0 auto;border-radius:30px;overflow:hidden;line-height:0;box-shadow:0 30px 70px rgba(184,92,120,.25);border:1px solid var(--border)}
-  .life-card img{width:100%;height:auto}
-  .life-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:clamp(40px,8vw,90px) clamp(18px,4vw,36px) clamp(16px,3vw,28px);line-height:1.3;color:#fff;font-family:"Cormorant Garamond",serif;font-size:clamp(1.15rem,2.6vw,1.7rem);font-weight:500;background:linear-gradient(to top,rgba(42,31,36,.78),transparent)}
 
   /* comissão no hero */
   .comm{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
@@ -311,49 +242,19 @@
   .comm span{font-size:11px;font-weight:600;color:var(--ink-soft);line-height:1.3;max-width:150px}
   @media(max-width:860px){.comm{justify-content:center}.comm div{align-items:center;text-align:center}}
   /* o que é o glowa */
-  .prod{background:#fff}
-  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .fact{background:var(--blush);border:1px solid var(--border);border-radius:24px;padding:24px 18px;text-align:center;transition:transform .45s var(--ease),box-shadow .4s}
-  .fact:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(184,92,120,.16)}
-  .fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(1.5rem,2.6vw,2rem);color:var(--pink-deep);line-height:1.1;font-weight:700}
-  .fact span{display:block;margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--ink-soft)}
-  .prod-p{max-width:720px;margin:30px auto 0;text-align:center;font-size:15.5px;line-height:1.8;color:var(--ink-soft)}
-  @media(max-width:860px){.facts{grid-template-columns:1fr 1fr}}
-  @media(max-width:460px){.facts{grid-template-columns:1fr}}
   .proof-note{max-width:640px;margin:14px auto 0;text-align:center;font-size:12.5px;line-height:1.7;color:var(--ink-muted)}
   .note--s{margin-top:10px}.note--s a{color:var(--pink-deep);font-weight:700;border-bottom:1px solid var(--pink)}
   /* depoimentos (só aparecem se preenchidos) */
-  .tst{background:var(--blush)}
-  .tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-  .tcard{background:#fff;border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:0 12px 34px rgba(184,92,120,.1)}
-  .tcard img{width:72px;height:72px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid var(--pink-soft)}
-  .tcard p{font-family:"Cormorant Garamond",serif;font-size:1.2rem;line-height:1.5}
-  .tcard b{display:block;margin-top:12px;font-size:14px}.tcard b a{color:var(--pink-deep)}
-  .tcard small{color:var(--ink-muted);font-size:12px}
-  .mock img.real{width:100%;height:auto;display:block}
 
   /* autoridade */
-  .auth{background:var(--ink);color:#fff}
-  .auth::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(50% 60% at 15% 0%,rgba(212,122,150,.35),transparent 70%),radial-gradient(40% 50% at 90% 100%,rgba(201,168,124,.18),transparent 70%)}
-  .auth .eyebrow{color:var(--pink)}
-  .auth .title{color:#fff}.auth .title em{color:var(--pink)}
-  .auth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .auth-c{text-align:center;padding:34px 20px;border:1px solid rgba(232,160,181,.28);border-radius:28px;background:rgba(255,255,255,.04);backdrop-filter:blur(6px);transition:transform .45s var(--ease),border-color .4s,background .4s}
-  .auth-c:hover{transform:translateY(-6px);border-color:#C9A87C;background:rgba(255,255,255,.07)}
-  .auth-c b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.8rem,6vw,4.4rem);line-height:1;background:linear-gradient(180deg,#F4D9B5,#C9A87C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#C9A87C}
-  .auth-c span{display:block;margin-top:12px;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.78)}
-  .auth-p{max-width:620px;margin:34px auto 28px;text-align:center;font-size:15.5px;line-height:1.8;color:rgba(255,255,255,.82)}
-  @media(max-width:760px){.auth-grid{grid-template-columns:1fr}}
 
   /* GLOWA na fonte do logo */
   .gl{font-family:"Great Vibes",cursive;font-style:normal;font-weight:400;font-size:1.3em;line-height:1;color:var(--ink);padding-inline:.04em;white-space:nowrap}
   .gl b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 18px rgba(224,122,150,.55);animation:glow 2.8s ease-in-out infinite alternate}
-  .auth .gl{color:#fff}.auth .gl b{color:var(--pink)}
   .title em .gl{color:inherit}
 
   /* upgrade: dourado e sparkles */
   .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink-deep),#D9A06E 55%,var(--pink-deep));background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 6s linear infinite}
-  .auth .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink),var(--gold-l),var(--pink));background-size:200% auto;-webkit-background-clip:text;background-clip:text}
   @keyframes shine{to{background-position:200% center}}
   .spark{position:fixed;inset:0;z-index:200;pointer-events:none}
 
@@ -406,27 +307,11 @@
   .mx i{font-style:normal;color:var(--gold);font-size:22px}
   .mx b{display:block;margin-top:8px;font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--gold-l);line-height:1.2}
   .mx span{display:block;margin-top:6px;font-size:13px;line-height:1.55;color:rgba(255,255,255,.75)}
-  .mvip{display:grid;grid-template-columns:minmax(0,230px) 1fr;gap:clamp(18px,3vw,36px);align-items:center;margin:6px clamp(16px,3vw,28px) clamp(20px,3vw,30px);padding:clamp(16px,3vw,28px);border:1px solid rgba(201,168,124,.4);border-radius:26px;background:rgba(255,255,255,.05)}
-  .mvip h4{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:600;line-height:1.1;margin-top:6px}
-  .mvip p:not(.eyebrow){margin-top:10px;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.8)}
-  .mvip ul{list-style:none;margin-top:14px;display:grid;gap:8px}
-  .mvip li{display:flex;gap:10px;font-size:14px;font-weight:600}
-  .mvip li::before{content:"♥";color:var(--pink);font-size:12px;margin-top:3px}
-  .vchat{margin-top:18px;display:grid;gap:8px;max-width:380px}
-  .vchat small{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-  .vchat .bub{background:rgba(255,255,255,.12);color:#fff}
-  .vchat .bub.me{background:var(--pink-deep)}
-  .mmore{margin:0 clamp(16px,3vw,28px) clamp(18px,3vw,30px);padding:clamp(26px,5vw,46px) clamp(18px,4vw,40px);text-align:center;border-radius:28px;border:1px solid var(--gold);background:radial-gradient(70% 90% at 50% 0%,rgba(232,160,181,.4),transparent 70%),linear-gradient(160deg,rgba(184,92,120,.55),rgba(42,31,36,.5));box-shadow:0 0 0 7px rgba(201,168,124,.1),0 30px 70px rgba(184,92,120,.3)}
-  .mmore .script{color:var(--gold-l);font-size:clamp(2.3rem,7vw,3.6rem)}
-  .mmore h4{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.1;margin-top:4px}
-  .mmore p:not(.script){margin:14px auto 0;max-width:560px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.88)}
   .swipe{display:none;text-align:center;font-size:12px;font-weight:700;color:var(--pink);padding:0 0 10px;letter-spacing:.04em}
-  .mem-cta{margin-top:34px}
   .mem-note{max-width:640px;margin:18px auto 0;text-align:center;font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.55)}
   @media(max-width:700px){
     .mapp{border-radius:26px}
     .mnav{display:none}.marr{display:none}.swipe{display:block}
-    .mvip{grid-template-columns:1fr}.mvip .mc{width:min(220px,70%);margin-inline:auto}
   }
   /* modal do módulo */
   .mdl{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:18px;background:rgba(42,31,36,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility 0s .35s}
@@ -473,39 +358,33 @@
   /* revelação com desfoque suave nos títulos */
   .js .title.rv,.js .hero h1.rv,.js .logo.rv{filter:blur(7px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--d,0ms)}
   .js .title.rv.in,.js .hero h1.rv.in,.js .logo.rv.in{filter:none}
-  .js .hero .rv{transition-delay:calc(var(--d,0ms) + 950ms)}
+  .js .hero .rv{transition-delay:calc(var(--d,0ms) + 650ms)}
   /* linha dourada fina na barra de navegação */
   .navbar.scrolled::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.65;pointer-events:none}
   /* entrada: cortina rosa com a logo (só CSS, nunca trava o site) */
-  .veil{position:fixed;inset:0;z-index:400;display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 40%,#fff,var(--pink-soft));pointer-events:none;animation:veil 1.7s var(--ease) .1s forwards}
-  .veil span{font-family:"Great Vibes",cursive;font-size:clamp(4.6rem,18vw,8rem);line-height:1;color:var(--ink);animation:veilLogo 1.7s var(--ease) .1s forwards}
+  .veil{position:fixed;inset:0;z-index:400;display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 40%,#fff,var(--pink-soft));pointer-events:none;animation:veil 1.2s var(--ease) .05s forwards}
+  .veil span{font-family:"Great Vibes",cursive;font-size:clamp(4.6rem,18vw,8rem);line-height:1;color:var(--ink);animation:veilLogo 1.2s var(--ease) .05s forwards}
   .veil span b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 30px rgba(224,122,150,.6)}
   @keyframes veil{0%,62%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
   @keyframes veilLogo{0%{opacity:0;transform:scale(.94);filter:blur(8px)}35%,62%{opacity:1;transform:none;filter:none}100%{opacity:0;transform:scale(1.06)}}
-  /* brilhos no topo */
-  .spk{position:absolute;color:var(--gold);pointer-events:none;z-index:1;animation:twk 3.6s ease-in-out infinite}
-  @keyframes twk{0%,100%{opacity:.15;transform:scale(.7) rotate(0)}50%{opacity:.95;transform:scale(1.15) rotate(18deg)}}
-  /* halo que acompanha o mouse (só desktop) */
-  .halo{position:fixed;left:0;top:0;width:440px;height:440px;margin:-220px 0 0 -220px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(232,160,181,.26),transparent 66%);opacity:0;transition:opacity .6s;will-change:transform}
-  .halo.on{opacity:1}
-  @media(hover:none),(pointer:coarse){.halo{display:none}}
+
+  /* pré-análise dentro do CTA */
+  .cta .pre{max-width:440px;margin:22px auto 0;padding:clamp(16px,4vw,24px);border:1px solid var(--border);border-radius:26px;box-shadow:none;background:var(--blush);text-align:left}
+  .cta .pre input[type=text]{background:#fff}
+  .cta .note b{color:var(--pink-deep)}
 </style>
 </head>
 <body>
 <div class="veil" aria-hidden="true"><span>Glow<b>a</b></span></div>
-<div class="halo" id="halo" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="navbar" id="navbar">
   <div class="navbar__in">
     <a href="#" class="brand">Glowa<small>Afiliadas</small></a>
     <nav><ul class="nlinks">
-      <li><a href="#o-glowa">Produto</a></li>
-      <li><a href="#membros">Membros</a></li>
       <li><a href="#prova">Resultados</a></li>
+      <li><a href="#membros">Produto</a></li>
       <li><a href="#simulador">Simulador</a></li>
-      <li><a href="#curadoria">Curadoria</a></li>
-      <li><a href="#sistema">O que você recebe</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul></nav>
@@ -516,12 +395,9 @@
 <div class="mmenu" id="mmenu" aria-hidden="true">
   <div class="mmenu__h"><span class="brand">Glowa</span><button class="mmenu__x" id="mclose" aria-label="Fechar menu">✕</button></div>
   <ul>
-    <li><a href="#o-glowa">Produto</a></li>
-    <li><a href="#membros">Membros</a></li>
-      <li><a href="#prova">Resultados</a></li>
+    <li><a href="#prova">Resultados</a></li>
+    <li><a href="#membros">Produto</a></li>
     <li><a href="#simulador">Simulador</a></li>
-    <li><a href="#curadoria">Curadoria</a></li>
-    <li><a href="#sistema">O que você recebe</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -533,10 +409,10 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="pill rv"><i></i> programa de afiliadas · candidatura por análise ♡</div><span class="vip rv">♛ Por convite · curadoria</span>
+        <div class="pill rv"><i></i> programa de afiliadas · candidatura por análise ♡</div>
         <div class="logo rv" style="--d:100ms">Glow<b>a</b><small>Afiliadas</small></div>
         <h1 class="rv" style="--d:200ms">A marca que influenciadoras <em>querem representar.</em></h1>
-        <p class="lede rv" style="--d:300ms">O GLOWA é o método de transformação feminina com mecanismo de vendas validado. Afiliadas com mais de 2 milhões de seguidores, inclusive modelos, já estão dentro. Se o seu perfil combina, você entra com site exclusivo, playbook e comissão em cada venda. 💖</p>
+        <p class="lede rv" style="--d:300ms">Método de transformação feminina com mecanismo de vendas validado e afiliadas de mais de 2 milhões de seguidores. Você recebe site exclusivo, playbook e comissão em cada venda. 💖</p>
         <div class="btn-row rv" style="--d:400ms">
           <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero me candidatar</a>
           <a href="#simulador" class="btn btn--ghost">Simular meus ganhos</a>
@@ -545,7 +421,6 @@
         <div class="comm rv" style="--d:560ms">
           <div><b>R$ 27,50</b><span>mínimo por venda</span></div>
           <div><b>Sobe com os bumps</b><span>quanto mais ela leva, mais você ganha</span></div>
-          <div><b>R$ 57</b><span>o método, + bumps de R$ 39 e R$ 17</span></div>
         </div>
       </div>
       <div class="hero-visual rv" style="--d:300ms">
@@ -557,54 +432,25 @@
   </div>
 </section>
 
-<div class="mq" aria-hidden="true"><div class="mq__t" id="mq"></div></div>
-
-<!-- NÚMEROS -->
-<section class="ledger">
-  <div class="wrap">
-    <p class="led-t">O programa em números</p>
-    <div class="led-grid">
-      <div class="led rv"><b data-c="2" data-pre="+" data-suf="M">0</b><span>seguidores no alcance de uma afiliada</span></div>
-      <div class="led rv" style="--d:80ms"><b data-c="6009.95" data-pre="R$ " data-dec="2">0</b><span>vendas em um único dia</span></div>
-      <div class="led rv" style="--d:160ms"><b data-c="30" data-suf=" dias">0</b><span>de garantia pra cliente indicar sem medo</span></div>
-      <div class="led rv" style="--d:240ms"><b data-c="27.5" data-pre="R$ " data-dec="2">0</b><span>comissão mínima por venda</span></div>
-    </div>
-    <p class="led-n">Prints reais de afiliadas · resultados variam conforme perfil, constância e divulgação</p>
-  </div>
-</section>
-
-<!-- QUEM JÁ ESTÁ DENTRO -->
-<section class="auth" id="quem-esta-dentro">
+<!-- PROVA -->
+<section class="proof" id="prova">
   <div class="wrap">
     <div class="head center">
-      <p class="eyebrow rv">Quem já está dentro</p>
-      <h2 class="title rv">Criadoras grandes já escolheram o <span class="gl">Glow<b>a</b></span>. <em>Seu perfil combina?</em></h2>
+      <p class="eyebrow rv">Prova real</p>
+      <h2 class="title rv">Elas estão vendendo. <em>Todo dia.</em></h2>
+      <p class="lede rv">Vídeo e prints de afiliadas GLOWA. Arrasta pro lado 👉</p>
     </div>
-    <div class="auth-grid">
-      <div class="auth-c rv"><b>+2M</b><span>de seguidores: já temos afiliadas com esse alcance</span></div>
-      <div class="auth-c rv" style="--d:90ms"><b>Modelos</b><span>e criadoras de beleza já vendem GLOWA</span></div>
-      <div class="auth-c rv" style="--d:180ms"><b>R$ 6k+</b><span>em um único dia, por uma afiliada</span></div>
+    <div class="car rv">
+      <div class="car__track" id="track">
+        <figure class="slide slide--phone"><div class="fr phone" id="phoneFr"><video class="vsale" src="src/img/vendasvideo.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-label="Vídeo mostrando as vendas de uma afiliada GLOWA"></video></div><p>Vendas de uma afiliada</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
+        <figure class="slide"><div class="fr"><img src="src/img/vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
+      </div>
+      <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
-    <p class="auth-p rv">Não é pra qualquer perfil. A gente analisa cada candidatura pra manter o nível da marca, e quem entra recebe site exclusivo, playbook e estrutura completa pra vender.</p>
-    <div class="btn-row rv" style="justify-content:center"><a href="#" data-wa class="btn">Quero me candidatar →</a></div>
-  </div>
-</section>
-
-<!-- O QUE É O GLOWA -->
-<section class="prod" id="o-glowa">
-  <div class="wrap">
-    <div class="head center">
-      <p class="eyebrow rv">O que suas seguidoras vão comprar</p>
-      <h2 class="title rv">O <span class="gl">Glow<b>a</b></span> é o método de <em>transformação feminina</em></h2>
-      <p class="lede rv">Um método completo de pele, cabelo, estilo, maquiagem e presença, em videoaulas e protocolos práticos dentro de uma área de membros. Pra mulher parar de se esconder e se sentir confiante no espelho.</p>
-    </div>
-    <div class="facts">
-      <div class="fact rv"><b>R$ 57</b><span>valor do método pra cliente</span></div>
-      <div class="fact rv" style="--d:70ms"><b>+ R$ 39 · R$ 17</b><span>order bumps opcionais no pagamento</span></div>
-      <div class="fact rv" style="--d:140ms"><b>30 dias</b><span>de garantia, o que dá segurança pra indicar</span></div>
-      <div class="fact rv" style="--d:210ms"><b>Imediato</b><span>acesso pelo celular ou computador</span></div>
-    </div>
-    <p class="prod-p rv">É fácil de indicar porque a dor é real (autoestima, pele, rotina) e o preço é acessível. Você não vende um produto qualquer: vende uma transformação que suas meninas já querem, com bônus de skincare por tipo de pele, maquiagem rápida, receitas e comunidade.</p>
+    <p class="bigline rv">Tem afiliada passando de <strong>R$ 6.000</strong> em um único dia.</p>
+    <p class="proof-note rv">Cada print é de um dia de uma afiliada. Os resultados variam conforme perfil, constância e divulgação.</p>
   </div>
 </section>
 
@@ -616,21 +462,20 @@
     <div class="head center">
       <p class="eyebrow rv">Área de membros</p>
       <h2 class="title rv">Um universo inteiro <em>dentro do <span class="gl">Glow<b>a</b></span></em></h2>
-      <p class="lede rv">É isso que as suas seguidoras recebem quando compram: módulos em vídeo, bônus e uma comunidade VIP acolhedora, tudo numa área linda e fácil de usar no celular. Produto de verdade é o que deixa a indicação leve. Arrasta pro lado e explora 👉</p>
+      <p class="lede rv">É isso que as suas seguidoras recebem ao comprar: módulos em vídeo, bônus e comunidade, numa área linda no celular. Arrasta pro lado 👉</p>
     </div>
-    <div class="chips rv"><span>8 módulos de método</span><span>Bônus exclusivos</span><span>Muito mais lá dentro</span><span>Comunidade VIP</span><span>Acesso imediato</span><span>Celular ou computador</span></div>
+    <div class="chips rv"><span>Método por R$ 57</span><span>8 módulos + bônus</span><span>Comunidade VIP</span><span>Acesso imediato</span></div>
 
     <div class="mapp rv" id="app">
       <div class="mtop">
         <span class="gl">Glow<b>a</b></span>
-        <nav class="mnav" aria-label="Seções da área de membros"><button data-go="rMod">Módulos</button><button data-go="rBon">Bônus</button><button data-go="rVip">Comunidade</button></nav>
+        <nav class="mnav" aria-label="Seções da área de membros"><button data-go="rMod">Módulos</button><button data-go="rBon">Bônus</button></nav>
         <span class="mav" aria-hidden="true">♡</span>
       </div>
 
       <div class="mhero">
         <div class="mlogo" aria-label="GLOWA">Glow<b>a</b></div>
         <h3>Bem-vinda, linda! ✨</h3>
-        <p>Seu espaço de transformação está pronto. Escolhe um módulo e começa por onde fizer mais sentido pra você.</p>
         <button class="btn" data-open="0">Começar agora</button>
       </div>
 
@@ -646,30 +491,8 @@
         <p class="swipe">arrasta pro lado 👉</p>
       </div>
 
-      <div class="mrow" id="rVip">
-        <div class="mrow__h"><div><h4>Comunidade VIP 💬</h4><small>Onde todo mundo se acolhe</small></div></div>
-        <div class="mvip">
-          <button class="mc" data-open="8" style="width:100%"><span class="mc__img"><img src="src/img/09.jpeg" onerror="imgFb(this)" alt="Capa do bônus Grupo VIP" width="1024" height="1536" decoding="async"></span></button>
-          <div>
-            <p class="eyebrow">Bônus Grupo VIP</p>
-            <h4>Uma comunidade onde todo mundo se acolhe</h4>
-            <p>Um ambiente seguro e carinhoso pra trocar ideia, tirar dúvida e crescer junto com outras mulheres que estão na mesma jornada.</p>
-            <ul><li>Comunidade ativa</li><li>Mulheres se apoiando de verdade</li><li>Você nunca faz a jornada sozinha</li></ul>
-            <div class="vchat"><small>exemplo ilustrativo</small>
-              <div class="bub">Gente, comecei o módulo de pele hoje! 🥹</div>
-              <div class="bub me">Vai amar! Qualquer dúvida é só chamar 💖</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mmore">
-        <p class="script">e tem muito mais lá dentro</p>
-        <h4>Ela compra e recebe muita coisa ✨</h4>
-        <p>O que você viu aqui é só uma prévia. Quem entra recebe um conteúdo completo, de extrema qualidade, feito com muito carinho e amor pra transformar de verdade a rotina e a autoestima dela.</p>
-      </div>
     </div>
-    <p class="mem-note">Prévia ilustrativa da área de membros. Conteúdo, módulos e bônus podem ser atualizados e ampliados pela equipe do GLOWA.</p>
-    <div class="btn-row center mem-cta rv"><a href="#" data-wa class="btn btn--wa">Quero me candidatar e indicar →</a></div>
+    <p class="mem-note">Prévia ilustrativa da área de membros.</p>
   </div>
 </section>
 
@@ -688,35 +511,13 @@
   </div>
 </div>
 
-<!-- PROVA -->
-<section class="proof" id="prova">
-  <div class="wrap">
-    <div class="head center">
-      <p class="eyebrow rv">Prova real</p>
-      <h2 class="title rv">Elas estão vendendo. <em>Todo dia.</em></h2>
-      <p class="lede rv">Vídeo e prints de afiliadas GLOWA: comissões, PIX gerado e vendas aprovadas no celular delas. Arrasta pro lado 👉</p>
-    </div>
-    <div class="car rv">
-      <div class="car__track" id="track">
-        <figure class="slide slide--phone"><div class="fr phone" id="phoneFr"><video class="vsale" src="src/img/vendasvideo.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback aria-label="Vídeo mostrando as vendas de uma afiliada GLOWA"></video></div><p>Vendas de uma afiliada</p></figure>
-        <figure class="slide"><div class="fr"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
-        <figure class="slide"><div class="fr"><img src="src/img/vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
-        <figure class="slide"><div class="fr"><img src="src/img/vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
-      </div>
-      <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
-    </div>
-    <p class="bigline rv">Tem afiliada passando de <strong>R$ 6.000</strong> em um único dia.</p>
-    <p class="proof-note rv">A comissão mínima por venda é de R$ 27,50 e sobe quando a cliente leva os order bumps. Cada print é de um dia de uma afiliada: os resultados variam conforme o tamanho do perfil, a constância e a divulgação.</p>
-  </div>
-</section>
-
 <!-- SIMULADOR -->
 <section class="sim stripes" id="simulador">
   <div class="wrap">
     <div class="head center">
       <p class="eyebrow rv">Simulador</p>
       <h2 class="title rv">Quanto <em>você pode ganhar?</em></h2>
-      <p class="lede rv">Mexe nos controles e vê o potencial do seu perfil.</p>
+      
     </div>
     <div class="sim-card rv">
       <div>
@@ -735,14 +536,13 @@
         <a href="#" data-wa class="btn">Quero esse resultado →</a>
       </div>
     </div>
-    <p class="disc">Simulação ilustrativa, calculada com a comissão mínima de R$ 27,50 por venda (o valor sobe quando a cliente leva os order bumps). Não é promessa nem garantia de ganhos: o resultado depende do seu público, da sua constância e da sua divulgação.</p>
+    <p class="disc">Simulação ilustrativa com a comissão mínima de R$ 27,50 por venda. Não é garantia de ganhos: depende do seu público, da constância e da divulgação.</p>
 
     <!-- ORDER BUMPS -->
     <div class="bump rv">
       <div>
-        <p class="eyebrow">Por que cada venda rende diferente</p>
         <h3 class="bump-t">Quanto mais ela leva, <em>mais você ganha.</em></h3>
-        <p class="bump-p">O método custa <b>R$ 57</b>, e na hora de pagar a cliente pode levar também os <b>order bumps</b> de <b>R$ 39</b> e <b>R$ 17</b>. Por isso a comissão sobe de uma venda pra outra: o mínimo é <b>R$ 27,50</b> por venda, e quanto mais a cliente leva, mais você ganha. Clica aí do lado e vê o carrinho crescendo 👉</p>
+        <p class="bump-p">O método custa <b>R$ 57</b>. Na hora de pagar, a cliente pode levar os bumps de <b>R$ 39</b> e <b>R$ 17</b>, e a sua comissão sobe. Marca aí do lado 👉</p>
       </div>
       <div class="cart" id="cart">
         <label class="cart__i is-locked"><input type="checkbox" checked disabled><span class="cart__n">Método GLOWA</span><b>R$ 57</b></label>
@@ -753,90 +553,6 @@
       </div>
     </div>
 
-    <!-- ESTRATÉGIA -->
-    <div class="strat rv"><div class="strat-img"><img src="src/img/victoria%20secret.jpg" onerror="imgFb(this)" alt="Modelo loira em cadeira de backstage com robe rosa" loading="lazy"></div><div class="strat-txt">
-      <p class="script">tem muito seguidor?</p>
-      <h3 class="strat-t">A gente monta uma <em>estratégia só sua</em> pra você vender com constância, sem se desgastar. 💸</h3>
-      <p class="strat-p">Quanto maior o seu público, maior o potencial. Você conta como é o seu perfil e a gente desenha o plano junto: o que postar, quando postar e como vender sem cansar a sua audiência.</p>
-      <a href="#" data-wa class="btn">Quero minha estratégia →</a>
-    </div></div>
-  </div>
-</section>
-
-<!-- CURADORIA + PRÉ-ANÁLISE -->
-<section class="cur" id="curadoria">
-  <div class="wrap"><div class="cur-grid">
-    <div>
-      <p class="eyebrow rv">Curadoria de perfis</p>
-      <h2 class="title rv">Não é um programa aberto. <em>É um clube.</em></h2>
-      <p class="lede rv" style="margin-top:14px">Cada candidatura passa por análise pra manter o nível da marca. Criadoras de todos os tamanhos entram, desde que o perfil combine. Veja o que olhamos:</p>
-      <div class="crit rv">
-        <div><i>♡</i><p><b>Encaixe com beleza e lifestyle</b><span>Seu conteúdo conversa com autocuidado feminino?</span></p></div>
-        <div><i>✦</i><p><b>Constância e conexão</b><span>Audiência que confia em você pesa mais que número.</span></p></div>
-        <div><i>♛</i><p><b>Estética e presença</b><span>O feed precisa estar à altura da marca.</span></p></div>
-      </div>
-    </div>
-    <div class="pre rv">
-      <h3>Faça sua pré-análise ♡</h3>
-      <p class="s">Preenche e a mensagem já vai personalizada pro nosso WhatsApp.</p>
-      <input type="text" id="pH" placeholder="@seuperfil" autocomplete="off" aria-label="Seu @">
-      <div class="ctl"><label for="pF">Seguidores <output id="pO">50 mil</output></label><input type="range" id="pF" min="0" max="5" value="2"></div>
-      <span class="tier" id="pT">Perfil em crescimento</span>
-      <a href="#" id="pGo" class="btn btn--wa" style="width:100%">Enviar minha pré-análise →</a>
-    </div>
-  </div></div>
-</section>
-
-<!-- SISTEMA -->
-<section class="sys" id="sistema">
-  <div class="wrap">
-    <div class="head center">
-      <p class="eyebrow rv">O que você recebe</p>
-      <h2 class="title rv">Um sistema completo. <em>Você só indica.</em></h2>
-      <p class="lede rv">Clica em cada aba e vê o que vai estar nas suas mãos desde o primeiro dia.</p>
-    </div>
-    <div class="tabs rv" id="tabs" role="tablist">
-      <button class="on" data-t="0" role="tab">🌐 Site exclusivo</button>
-      <button data-t="1" role="tab">📋 Playbook</button>
-      <button data-t="2" role="tab">💬 Grupo</button>
-      <button data-t="3" role="tab">🤝 Suporte</button>
-    </div>
-
-    <div class="panel on" data-p="0">
-      <div><h3>Um site com a sua cara</h3><p>Analisamos o que você posta e montamos uma página no seu visual, pronta pro bio e pros stories.</p>
-        <ul><li>Feito sob medida pro seu perfil</li><li>Seu link de comissão já dentro</li><li>Bonito no celular</li></ul></div>
-      <div class="mock"><div class="mock__bar"><i></i><i></i><i></i></div><div class="mock__body"><div class="mock__logo">Glow<b>a</b></div><div class="mock__h">O método que muda como você se vê</div><span class="mock__b">Quero meu glow</span><div class="mock__u">exemplo ilustrativo · <b>@seuperfil</b></div></div></div>
-    </div>
-
-    <div class="panel" data-p="1">
-      <div><h3>Você não inventa nada do zero</h3><p>Recebe o passo a passo do que já funciona: o que falar, quando postar e exemplos prontos pra adaptar.</p>
-        <ul><li>Scripts e ideias de conteúdo</li><li>Melhores momentos pra divulgar</li><li>Marca os passos que já fez 👉</li></ul></div>
-      <div class="mock"><div class="chk">
-        <label><input type="checkbox"> Receber o site e colocar no bio</label>
-        <label><input type="checkbox"> Postar o primeiro story com o link</label>
-        <label><input type="checkbox"> Usar o script de apresentação</label>
-        <label><input type="checkbox"> Comemorar a primeira venda 🎉</label>
-      </div></div>
-    </div>
-
-    <div class="panel" data-p="2">
-      <div><h3>Só mulheres, só quem vende GLOWA</h3><p>Um espaço leve e organizado pra trocar ideia, tirar dúvida e comemorar cada venda junto com as outras afiliadas.</p>
-        <ul><li>Troca de ideias e conteúdo</li><li>Ambiente de respeito e crescimento</li><li>Você nunca vende sozinha</li></ul></div>
-      <div class="mock"><div class="chat"><small>exemplo ilustrativo</small>
-        <div class="bub">Gente, como vocês estão postando o link? 🙈</div>
-        <div class="bub me">Nos stories com enquete, funciona muito! 💖</div>
-        <div class="bub">Obrigada, vou testar hoje! ✨</div></div></div>
-    </div>
-
-    <div class="panel" data-p="3">
-      <div><h3>Tem sempre pra quem perguntar</h3><p>A gente acompanha, tira dúvida e te ajuda a destravar. Seu primeiro contato é pelo WhatsApp e a resposta vem em menos de 24h.</p>
-        <ul><li>Atendimento direto no WhatsApp</li><li>Orientação do começo ao fim</li><li>Resposta em menos de 24h</li></ul></div>
-      <div class="mock"><div class="sup">
-        <div><span>1</span><p><b>Você manda um oi</b><em>com o link do seu perfil</em></p></div>
-        <div><span>2</span><p><b>A gente responde</b><em>em menos de 24h</em></p></div>
-        <div><span>3</span><p><b>Você começa a vender</b><em>com tudo na mão</em></p></div>
-      </div></div>
-    </div>
   </div>
 </section>
 
@@ -850,23 +566,9 @@
     <div class="steps">
       <div class="step rv"><div class="step__n">1</div><div><h3>Você se candidata</h3><p>Manda um oi no WhatsApp com o link do seu perfil. A gente analisa o encaixe.</p></div></div>
       <div class="step rv" style="--d:80ms"><div class="step__n">2</div><div><h3>Aceita o convite</h3><p>Depois da conversa, você aceita o <a href="#" data-cakto target="_blank" rel="noopener">convite de afiliação</a> e já fica com seu link de vendas.</p></div></div>
-      <div class="step rv" style="--d:160ms"><div class="step__n">3</div><div><h3>Recebe tudo</h3><p>Seu site exclusivo e o playbook de vendas.</p></div></div>
-      <div class="step rv" style="--d:240ms"><div class="step__n">4</div><div><h3>Vende com a gente</h3><p>Entra no grupo e começa a ver as comissões. 💸</p></div></div>
+      <div class="step rv" style="--d:160ms"><div class="step__n">3</div><div><h3>Recebe tudo</h3><p>Site exclusivo, playbook de vendas, grupo de afiliadas e suporte.</p></div></div>
+      <div class="step rv" style="--d:240ms"><div class="step__n">4</div><div><h3>Vende com a gente</h3><p>Posta, indica e acompanha as comissões caindo. 💸</p></div></div>
     </div>
-  </div>
-</section>
-
-<!-- UNIVERSO GLOWA -->
-<section class="life">
-  <div class="wrap">
-    <div class="head center">
-      <p class="eyebrow rv">Universo GLOWA</p>
-      <h2 class="title rv">Beleza, presença e <em>autocuidado</em></h2>
-    </div>
-    <figure class="life-card rv">
-      <img src="src/img/modelo1.jpg" onerror="imgFb(this)" alt="Modelo recebendo maquiagem em backstage rosa" loading="lazy">
-      <figcaption>O mesmo universo que você já mostra no feed, agora com estrutura pra vender. ♡</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -876,12 +578,9 @@
     <div class="cta-box rv">
       <p class="script">faça parte do <span class="gl">Glow<b>a</b></span></p>
       <h2 class="title">Seu perfil combina com o <span class="gl">Glow<b>a</b></span>?</h2>
-      <p class="lede">Candidate-se pelo WhatsApp: a mensagem já vai prontinha, é só enviar. Analisamos o seu perfil e respondemos em menos de 24h. 💌</p>
-      <div class="msg"><small>Mensagem pronta</small><span id="msgPreview"></span></div>
-      <div class="btn-row">
-        <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero me candidatar</a>
-      </div>
-      <p class="note">Cada perfil é analisado com cuidado · resposta em <b>menos de 24h</b> 💌</p>
+      <p class="lede">Conta seu @ e o tamanho do seu público. A mensagem já vai pronta pro nosso WhatsApp e a gente responde em menos de 24h. 💌</p>
+      <div class="pre"><input type="text" id="pH" placeholder="@seuperfil" autocomplete="off" aria-label="Seu @"><div class="ctl"><label for="pF">Seguidores <output id="pO">50 mil</output></label><input type="range" id="pF" min="0" max="5" value="2"></div><span class="tier" id="pT">Perfil em crescimento</span><a href="#" id="pGo" class="btn btn--wa" style="width:100%">Candidatar meu perfil →</a></div>
+      <p class="note">Quem tem muito seguidor ganha uma <b>estratégia só sua</b> 💸</p>
     </div>
   </div>
 </section>
@@ -912,19 +611,12 @@
   const CAKTO_INVITE = "https://app.cakto.com.br/affiliate/invite/d1a5edec-e555-4bdb-809c-db7954c337ce";
   const AFFILIATE_TESTIMONIALS = [];
   const AFFILIATES_COUNT = null;
-  const GROUP_PRINT = "";
-  const SITE_PREVIEW = "";
   const COMMISSION_PER_SALE = 27.5;
 
   const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESSAGE);
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
   document.querySelectorAll('[data-cakto]').forEach(a => a.href = CAKTO_INVITE);
-  document.getElementById('msgPreview').textContent = MESSAGE;
-
-  /* marquee */
-  const words = ["+2 milhões de seguidores entre as afiliadas","modelos e criadoras já dentro","mecanismo de vendas validado","site exclusivo pra você","playbook de vendas","comissão em cada venda"];
-  const row = words.map(w => `<span>${w}</span>`).join('');
-  document.getElementById('mq').innerHTML = row + row;
+  
 
   /* navbar / progress / menu */
   const navbar = document.getElementById('navbar'), bar = document.getElementById('progress'); let tick = false;
@@ -939,7 +631,7 @@
   burger.onclick = () => setM(true); document.getElementById('mclose').onclick = () => setM(false);
   mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setM(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setM(false); });
-  addEventListener('resize', () => { if (innerWidth > 1300) setM(false); });
+  addEventListener('resize', () => { if (innerWidth > 900) setM(false); });
 
   /* reveal */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08, rootMargin: '0px 0px -30px 0px' });
@@ -1010,13 +702,11 @@
       const sec=document.createElement('section'); sec.className='tst'; sec.id='depoimentos';
       sec.innerHTML='<div class="wrap"><div class="head center"><p class="eyebrow">Elas já vendem</p><h2 class="title">Afiliadas <em>de verdade</em></h2></div><div class="tst-grid">'+
         AFFILIATE_TESTIMONIALS.map(t=>'<article class="tcard">'+(t.photo?'<img src="'+esc(t.photo)+'" onerror="imgFb(this)" alt="'+esc(t.name)+'" loading="lazy">':'')+'<p>“'+esc(t.quote)+'”</p><b>'+esc(t.name)+' <a>'+esc(t.handle||'')+'</a></b><small>'+esc([t.niche,t.followers&&(t.followers+' seguidores')].filter(Boolean).join(' · '))+'</small></article>').join('')+'</div></div>';
-      document.getElementById('sistema').before(sec);
+      document.getElementById('membros').before(sec);
     }
     if (AFFILIATES_COUNT){
       const c=document.querySelector('.comm'); if(c) c.insertAdjacentHTML('beforeend','<div><b>+'+AFFILIATES_COUNT+'</b><span>afiliadas ativas no grupo</span></div>');
     }
-    if (GROUP_PRINT){ const m=document.querySelector('[data-p="2"] .mock'); if(m) m.innerHTML='<img class="real" src="'+esc(GROUP_PRINT)+'" onerror="imgFb(this)" alt="Print do grupo de afiliadas" loading="lazy">'; }
-    if (SITE_PREVIEW){ const m=document.querySelector('[data-p="0"] .mock'); if(m) m.innerHTML='<img class="real" src="'+esc(SITE_PREVIEW)+'" onerror="imgFb(this)" alt="Site de uma afiliada GLOWA" loading="lazy">'; }
   })();
 
   /* tabs */
@@ -1030,18 +720,11 @@
 
   /* FAQ */
   const faqs = [
-    ["O GLOWA aceita qualquer perfil?","Não. A gente analisa o encaixe do seu conteúdo com beleza, autocuidado e lifestyle feminino pra manter o nível da marca. Já temos afiliadas com mais de 2 milhões de seguidores, inclusive modelos, e também perfis menores com boa constância."],
     ["Quanto eu ganho por venda?","A comissão mínima é de R$ 27,50 por venda e sobe quando a cliente leva os order bumps na hora de pagar. Você acompanha as vendas e comissões pelo app da Cakto."],
     ["O que a cliente compra e por quanto?","O método GLOWA custa R$ 57 e vem com acesso imediato, bônus e garantia de 30 dias. Na hora de pagar ela ainda pode adicionar os order bumps de R$ 39 e R$ 17."],
     ["Funciona com perfil pequeno?","Pode funcionar, sim. A gente olha o encaixe do seu conteúdo com beleza e autocuidado, não só o número de seguidores. O resultado depende do tamanho do público, da constância e da divulgação, e quanto maior a audiência, maior o potencial."],
-    ["Funciona se eu só posto reels de maquiagem?","Funciona. Reels de maquiagem, rotina e autocuidado combinam muito com o GLOWA. A gente te orienta a encaixar o link no formato que você já posta."],
     ["Preciso aparecer na câmera?","Não necessariamente. Dá pra divulgar com stories de texto, enquetes, bastidores e o link no bio. A gente te ajuda a achar o formato que combina com o seu jeito."],
-    ["Preciso ter muitos seguidores?","Não. O que importa é o perfil combinar com beleza, autocuidado ou lifestyle feminino e você ter consistência. Analisamos o conteúdo e o encaixe, não só o número."],
-    ["Como recebo as comissões?","As vendas geradas pelo seu link geram comissão conforme as regras do programa. Você acompanha e recebe conforme o fluxo informado após a aprovação."],
-    ["Vou ficar sozinha depois de entrar?","Não. Você entra no grupo de afiliadas, recebe o playbook de vendas e tem suporte. A ideia é que nenhuma afiliada se sinta perdida."],
-    ["Tem taxa para ser afiliada?","A candidatura e a estrutura (site + grupo + orientações) fazem parte do programa. Os detalhes de condições são passados na análise do perfil."],
-    ["Em quanto tempo o site fica pronto?","Após a aprovação do perfil, trabalhamos na sua página e enviamos o material. O prazo exato é informado na aprovação."],
-    ["Posso indicar mesmo se nunca vendi nada online?","Sim. Muitas afiliadas começam do zero. Por isso entregamos instruções claras e o grupo, pra você não precisar descobrir tudo sozinha."]
+    ["Tem taxa para ser afiliada?","A candidatura e a estrutura (site + grupo + orientações) fazem parte do programa. Os detalhes de condições são passados na análise do perfil."]
   ];
   const fl = document.getElementById('fl');
   fl.innerHTML = faqs.map(([q,a],i) => `<div class="fq rv" style="--d:${i*40}ms"><button aria-expanded="false" aria-controls="fp${i}"><span>${q}</span><span class="ic" aria-hidden="true">+</span></button><div class="pn" id="fp${i}" role="region"><div><p class="a">${a}</p></div></div></div>`).join('');
@@ -1074,7 +757,7 @@ if(!RM){
  const cv=document.createElement('canvas');cv.className='spark';document.body.appendChild(cv);const cx=cv.getContext('2d');let P=[];
  const rs=()=>{cv.width=innerWidth;cv.height=innerHeight};rs();addEventListener('resize',rs);
  const add=(x,y,n,b)=>{for(let i=0;i<n;i++)P.push({x,y,vx:(Math.random()-.5)*(b?6:1.2),vy:(Math.random()-.5)*(b?6:1.2)-(b?1.5:0),l:1,s:8+Math.random()*10,c:Math.random()<.5?'✦':'♥',h:Math.random()<.4?'#C9A87C':'#E8A0B5'})};
- addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&Math.random()<.45)add(e.clientX,e.clientY,1)});
+ addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&Math.random()<.2)add(e.clientX,e.clientY,1)});
  addEventListener('pointerdown',e=>add(e.clientX,e.clientY,12,1));
  (function f(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.l>0);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.03;p.l-=.022;cx.globalAlpha=Math.max(p.l,0);cx.fillStyle=p.h;cx.font=p.s+'px serif';cx.fillText(p.c,p.x,p.y)});requestAnimationFrame(f)})();
  document.querySelectorAll('.led,.crit div').forEach(el=>{
@@ -1165,21 +848,5 @@ document.querySelectorAll('#membros [data-wa],#mdl [data-wa]').forEach(a=>{a.hre
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const p=v.play();if(p&&p.catch)p.catch(()=>{})}else v.pause()}),{threshold:.35});io.observe(v)})();
 </script>
 
-<script>
-/* acabamento: brilhos no topo + halo do mouse */
-(function(){try{
- const hero=document.querySelector('.hero');
- if(hero&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-  [[8,18,16,0],[90,12,22,.9],[14,70,12,1.7],[82,64,15,2.4],[48,6,11,1.2],[60,88,13,.4]].forEach(p=>{const i=document.createElement('i');i.className='spk';i.textContent='✦';i.style.cssText='left:'+p[0]+'%;top:'+p[1]+'%;font-size:'+p[2]+'px;animation-delay:'+p[3]+'s;font-style:normal';hero.appendChild(i)});
- }
- const h=document.getElementById('halo');
- if(h&&matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-  let x=innerWidth/2,y=innerHeight/2,tx=x,ty=y,raf=0;
-  const loop=()=>{x+=(tx-x)*.12;y+=(ty-y)*.12;h.style.transform='translate3d('+x+'px,'+y+'px,0)';raf=(Math.abs(tx-x)+Math.abs(ty-y)>.5)?requestAnimationFrame(loop):0};
-  addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY;h.classList.add('on');if(!raf)raf=requestAnimationFrame(loop)},{passive:true});
-  document.addEventListener('pointerleave',()=>h.classList.remove('on'));
- }
-}catch(e){console.error('GLOWA acabamento:',e)}})();
-</script>
 </body>
 </html>
