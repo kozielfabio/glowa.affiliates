@@ -16,6 +16,7 @@
     --blush:#FDF2F5;--cream:#FFF9F7;--white:#fff;
     --ink:#2A1F24;--ink-soft:#5C4A52;--ink-muted:#8A7880;
     --border:rgba(184,92,120,.22);--ease:cubic-bezier(.16,1,.3,1);
+    --gold:#C9A87C;--gold-l:#F4D9B5;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
@@ -28,6 +29,7 @@
   .wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(20px,5vw,48px);position:relative;z-index:2}
   :focus-visible{outline:2px solid var(--pink-deep);outline-offset:3px;border-radius:8px}
   .eyebrow{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--pink-deep)}
+  .eyebrow::before{content:"✦ ";color:var(--gold)}
   .title{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.08;letter-spacing:-.01em;text-wrap:balance;margin-top:10px}
   .title em{font-style:italic;font-weight:500;color:var(--pink-deep)}
   .lede{color:var(--ink-soft);font-size:16px;line-height:1.75;max-width:520px}
@@ -58,7 +60,7 @@
   .navbar__in{max-width:1120px;margin-inline:auto;padding:14px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px}
   .brand{font-family:"Great Vibes",cursive;font-size:34px;line-height:1}
   .brand small{font-family:"Manrope",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--pink-deep);margin-left:8px;vertical-align:middle}
-  .nlinks{display:flex;gap:28px;list-style:none}
+  .nlinks{display:flex;gap:18px;list-style:none}
   .nlinks a{position:relative;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s}
   .nlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--pink-deep);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
   .nlinks a:hover,.nlinks a.on{color:var(--pink-deep)}.nlinks a:hover::after,.nlinks a.on::after{transform:scaleX(1)}
@@ -66,14 +68,14 @@
   .ncta:hover{background:var(--pink-mid);transform:translateY(-1px)}
   .burger{display:none;flex-direction:column;gap:5px;width:42px;height:42px;align-items:center;justify-content:center;background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:50%;cursor:pointer}
   .burger span{width:16px;height:1.5px;background:var(--ink)}
-  .mmenu{position:fixed;inset:0;z-index:90;background:var(--blush);display:flex;flex-direction:column;padding:16px clamp(20px,5vw,48px) 34px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s var(--ease),transform .35s var(--ease),visibility 0s .35s}
+  .mmenu{position:fixed;inset:0;z-index:90;background:var(--blush);display:flex;flex-direction:column;padding:16px clamp(20px,5vw,48px) 34px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s var(--ease),transform .35s var(--ease),visibility 0s .35s;overflow-y:auto}
   .mmenu.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s var(--ease),transform .35s var(--ease),visibility 0s}
   .mmenu__h{display:flex;justify-content:space-between;align-items:center}
   .mmenu__x{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:16px}
   .mmenu ul{list-style:none;margin-block:auto}
   .mmenu li a{display:block;padding:15px 0;font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,8vw,2.4rem);font-weight:600;border-bottom:1px solid var(--border)}
-  @media(max-width:900px){.nlinks,.ncta{display:none}.burger{display:flex}}
-  @media(min-width:901px){.mmenu{display:none}}
+  @media(max-width:1000px){.nlinks,.ncta{display:none}.burger{display:flex}}
+  @media(min-width:1001px){.mmenu{display:none}}
 
   /* hero */
   .hero{padding:120px 0 70px;min-height:92svh;display:flex;align-items:center}
@@ -83,6 +85,7 @@
   .pill{display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.8);color:var(--pink-deep);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
   .pill i{width:7px;height:7px;border-radius:50%;background:var(--pink-deep);animation:pulse 1.6s ease-in-out infinite}
   @keyframes pulse{50%{opacity:.4;transform:scale(.8)}}
+  .vip{display:inline-flex;align-items:center;margin:8px 8px 0 0;padding:9px 16px;border-radius:999px;background:linear-gradient(135deg,#2A1F24,#4a343d);color:var(--gold-l);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--gold)}
   .logo{font-family:"Great Vibes",cursive;font-size:clamp(4.4rem,11vw,7.4rem);line-height:1;margin-top:18px}
   .logo b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 28px rgba(224,122,150,.55);animation:glow 2.8s ease-in-out infinite alternate}
   .logo small{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(1rem,2.4vw,1.4rem);letter-spacing:.42em;text-transform:uppercase;color:var(--pink-deep);font-weight:500;margin-top:-4px}
@@ -93,7 +96,7 @@
   .hero-sub{margin-top:16px;font-size:12.5px;color:var(--ink-muted)}.hero-sub b{color:var(--pink-deep)}
   .hero-visual{position:relative;max-width:360px;margin-inline:auto;width:100%}
   .hero-visual .shot img{width:100%;height:auto}
-  .hero-visual .shot{border-radius:26px;overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 80px rgba(184,92,120,.28);transform:rotate(2.5deg);transition:transform .6s var(--ease);background:#fff}
+  .hero-visual .shot{border-radius:26px;overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 80px rgba(184,92,120,.28);transform:rotate(2.5deg);transition:transform .6s var(--ease);background:#fff;min-height:200px}
   .hero-visual:hover .shot{transform:rotate(0)}
   .hero-visual .tag{position:absolute;left:-18px;bottom:30px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px rgba(184,92,120,.22);animation:float 4s ease-in-out infinite}
   .tag small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted)}
@@ -108,6 +111,17 @@
   .mq__t span::after{content:"✦";color:var(--pink);margin-left:36px;font-style:normal;font-size:.85rem}
   @keyframes mq{to{transform:translateX(-50%)}}
 
+  /* ledger (novo) */
+  .ledger{background:var(--ink);padding-block:clamp(40px,5vw,64px);color:#fff}
+  .ledger::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 80% at 50% 0,rgba(201,168,124,.22),transparent 70%)}
+  .led-t{text-align:center;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+  .led-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .led{text-align:center;padding:26px 14px;border:1px solid rgba(201,168,124,.35);border-radius:24px;background:rgba(255,255,255,.04);transition:transform .3s var(--ease)}
+  .led b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2rem,4.4vw,3.3rem);line-height:1;background:linear-gradient(180deg,var(--gold-l),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-variant-numeric:tabular-nums}
+  .led span{display:block;margin-top:10px;font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.75)}
+  .led-n{text-align:center;font-size:11.5px;color:rgba(255,255,255,.5);margin-top:18px}
+  @media(max-width:760px){.led-grid{grid-template-columns:1fr 1fr}}
+
   /* proof carousel */
   .proof{background:#fff}
   .car{position:relative}
@@ -118,6 +132,7 @@
   .slide:hover{transform:translateY(-6px);box-shadow:0 28px 56px rgba(184,92,120,.2)}
   .slide .fr{background:#121212;border-radius:18px;overflow:hidden;line-height:0;box-shadow:0 10px 28px rgba(42,31,36,.18)}
   .slide img{height:clamp(300px,68vw,440px);width:auto;max-width:none;display:block;pointer-events:none;-webkit-user-drag:none}
+  .slide video{height:clamp(300px,68vw,440px);width:auto;aspect-ratio:9/16;max-width:none;display:block;object-fit:contain;background:#121212;pointer-events:none}
   .slide p{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);padding:12px 6px 4px;display:flex;gap:8px;align-items:center}
   .slide p::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink-deep)}
   .car__nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
@@ -146,6 +161,21 @@
   .res .btn{margin-top:20px;width:100%}
   .disc{max-width:880px;margin:20px auto 0;text-align:center;font-size:12px;line-height:1.6;color:var(--ink-muted)}
   @media(max-width:760px){.sim-card{grid-template-columns:1fr}}
+
+  /* curadoria (novo) */
+  .cur{background:linear-gradient(180deg,#fff,var(--blush))}
+  .cur-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
+  .crit{display:grid;gap:12px;margin-top:22px}
+  .crit div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;padding:14px 16px;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:18px;box-shadow:0 8px 24px rgba(184,92,120,.08)}
+  .crit i{font-style:normal;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(160deg,var(--pink),var(--pink-deep));color:#fff;font-size:18px}
+  .crit b{display:block;font-size:14px}.crit span{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+  .pre{background:#fff;border:1px solid var(--gold);border-radius:34px;padding:clamp(24px,4vw,40px);box-shadow:0 0 0 9px rgba(201,168,124,.12),0 40px 90px rgba(184,92,120,.2)}
+  .pre h3{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;line-height:1.1}
+  .pre .s{font-size:13px;color:var(--ink-muted);margin:6px 0 18px}
+  .pre input[type=text]{width:100%;padding:15px 18px;border:1.5px solid var(--border);border-radius:16px;font:600 15px Manrope,sans-serif;background:var(--blush);color:var(--ink);margin-bottom:16px}
+  .pre input[type=text]:focus{outline:2px solid var(--pink-deep);background:#fff}
+  .tier{display:inline-block;margin:2px 0 16px;padding:7px 14px;border-radius:999px;background:linear-gradient(135deg,#2A1F24,#4a343d);color:var(--gold-l);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  @media(max-width:860px){.cur-grid{grid-template-columns:1fr}}
 
   /* system tabs */
   .sys{background:#fff}
@@ -319,6 +349,101 @@
   .gl b{font-weight:400;color:var(--pink-deep);text-shadow:0 0 18px rgba(224,122,150,.55);animation:glow 2.8s ease-in-out infinite alternate}
   .auth .gl{color:#fff}.auth .gl b{color:var(--pink)}
   .title em .gl{color:inherit}
+
+  /* upgrade: dourado e sparkles */
+  .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink-deep),#D9A06E 55%,var(--pink-deep));background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 6s linear infinite}
+  .auth .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink),var(--gold-l),var(--pink));background-size:200% auto;-webkit-background-clip:text;background-clip:text}
+  @keyframes shine{to{background-position:200% center}}
+  .spark{position:fixed;inset:0;z-index:200;pointer-events:none}
+
+  /* ===== ÁREA DE MEMBROS ===== */
+  .mem{color:#fff;background:radial-gradient(55% 40% at 15% 0%,rgba(212,122,150,.5),transparent 70%),radial-gradient(45% 40% at 95% 60%,rgba(201,168,124,.22),transparent 70%),radial-gradient(60% 40% at 50% 100%,rgba(184,92,120,.4),transparent 70%),linear-gradient(180deg,#2A1F24,#40202f 50%,#2A1F24)}
+  .mem .eyebrow{color:var(--pink)}
+  .mem .title{color:#fff}.mem .title em{color:var(--pink)}
+  .mem .title em:not(:has(.gl)){background:linear-gradient(100deg,var(--pink),var(--gold-l),var(--pink));background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 6s linear infinite}
+  .mem .lede{color:rgba(255,255,255,.8);max-width:600px}
+  .feathers{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+  .feathers i{position:absolute;top:-60px;width:12px;height:34px;border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:linear-gradient(160deg,rgba(255,255,255,.85),rgba(232,160,181,.55));box-shadow:0 0 14px rgba(244,168,188,.7);opacity:0;animation:fall var(--t,16s) linear var(--dl,0s) infinite}
+  @keyframes fall{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}8%{opacity:.85}50%{transform:translate3d(var(--sx,30px),55vh,0) rotate(160deg)}100%{transform:translate3d(calc(var(--sx,30px) * -1),115vh,0) rotate(340deg);opacity:0}}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 auto 32px;max-width:760px}
+  .chips span{padding:10px 18px;border:1px solid rgba(201,168,124,.45);border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);color:var(--gold-l);font-size:12.5px;font-weight:700;letter-spacing:.04em}
+  /* app estilo Cakto */
+  .mapp{max-width:1060px;margin-inline:auto;border-radius:32px;border:1px solid rgba(232,160,181,.4);background:linear-gradient(180deg,#34202b,#27181f);box-shadow:0 0 0 8px rgba(255,255,255,.04),0 50px 120px rgba(184,92,120,.45),0 0 90px rgba(232,160,181,.25);overflow:hidden}
+  .mtop{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px clamp(14px,3vw,26px);background:rgba(248,232,238,.08);border-bottom:1px solid rgba(232,160,181,.22)}
+  .mtop .gl{font-size:2rem;color:#fff}.mtop .gl b{color:var(--pink)}
+  .mnav{display:flex;gap:6px}
+  .mnav button{padding:9px 16px;border:0;border-radius:999px;background:none;color:rgba(255,255,255,.75);font-size:12.5px;font-weight:700;cursor:pointer;transition:.3s var(--ease)}
+  .mnav button:hover{background:rgba(255,255,255,.1);color:#fff}
+  .mav{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(160deg,var(--pink),var(--pink-deep));color:#fff;font-size:16px;box-shadow:0 0 18px rgba(232,160,181,.6)}
+  .mhero{position:relative;text-align:center;padding:clamp(34px,6vw,64px) 20px clamp(10px,2vw,18px);overflow:hidden}
+  .mhero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(50% 70% at 50% 0%,rgba(232,160,181,.5),transparent 70%),radial-gradient(35% 50% at 10% 100%,rgba(201,168,124,.2),transparent 70%)}
+  .mhero>*{position:relative}
+  .mlogo{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(4.6rem,16vw,8.4rem);line-height:.95;color:#fff;text-shadow:0 0 30px rgba(244,168,188,.7)}
+  .mlogo b{font-weight:400;color:var(--pink);animation:glow 2.8s ease-in-out infinite alternate}
+  .mhero h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.9rem,5.4vw,3.2rem);line-height:1.1;margin-top:10px}
+  .mhero p{margin:10px auto 0;max-width:460px;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.78)}
+  .mhero .btn{margin-top:20px;min-height:48px}
+  .mrow{padding:clamp(14px,3vw,26px) 0 8px}
+  .mrow__h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,3vw,28px);margin-bottom:12px}
+  .mrow__h h4{font-family:"Cormorant Garamond",serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:600}
+  .mrow__h small{display:block;margin-top:2px;font-family:"Manrope",sans-serif;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.02em}
+  .marr{display:flex;gap:8px}
+  .marr button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(232,160,181,.4);background:rgba(255,255,255,.07);color:#fff;font-size:17px;cursor:pointer;transition:.25s}
+  .marr button:hover{background:var(--pink-deep)}
+  .mtrack{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px clamp(16px,3vw,28px) 18px;scroll-padding-inline:clamp(16px,3vw,28px);cursor:grab;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+  .mtrack::-webkit-scrollbar{display:none}
+  .mtrack.drag{cursor:grabbing;scroll-snap-type:none}
+  .mc{flex:0 0 auto;width:clamp(150px,44vw,214px);scroll-snap-align:start;padding:0;border:0;background:none;color:#fff;text-align:left;cursor:pointer;font-family:inherit;transition:transform .35s var(--ease);will-change:transform}
+  .mc__img{position:relative;display:block;border-radius:20px;overflow:hidden;line-height:0;border:1px solid rgba(232,160,181,.4);box-shadow:0 18px 40px rgba(0,0,0,.4);transition:box-shadow .35s,border-color .3s}
+  .mc__img img{width:100%;height:auto;pointer-events:none;-webkit-user-drag:none}
+  .mc__img::after{content:"Ver prévia ✦";position:absolute;inset:auto 0 0 0;padding:34px 10px 12px;line-height:1.2;text-align:center;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(to top,rgba(42,31,36,.9),transparent);opacity:0;transform:translateY(8px);transition:.35s var(--ease)}
+  .mc:hover .mc__img,.mc:focus-visible .mc__img{border-color:var(--gold);box-shadow:0 26px 60px rgba(232,160,181,.45),0 0 0 1px var(--gold)}
+  .mc:hover .mc__img::after,.mc:focus-visible .mc__img::after{opacity:1;transform:none}
+  .mc__t{display:block;margin-top:10px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+  .mc__t b{display:block;margin-top:3px;font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;letter-spacing:0;text-transform:none;color:#fff;line-height:1.15}
+  .mx{flex:0 0 auto;width:clamp(200px,60vw,250px);scroll-snap-align:start;padding:22px 20px;border:1px solid rgba(201,168,124,.45);border-radius:20px;background:rgba(255,255,255,.06);align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+  .mx i{font-style:normal;color:var(--gold);font-size:22px}
+  .mx b{display:block;margin-top:8px;font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--gold-l);line-height:1.2}
+  .mx span{display:block;margin-top:6px;font-size:13px;line-height:1.55;color:rgba(255,255,255,.75)}
+  .mvip{display:grid;grid-template-columns:minmax(0,230px) 1fr;gap:clamp(18px,3vw,36px);align-items:center;margin:6px clamp(16px,3vw,28px) clamp(20px,3vw,30px);padding:clamp(16px,3vw,28px);border:1px solid rgba(201,168,124,.4);border-radius:26px;background:rgba(255,255,255,.05)}
+  .mvip h4{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:600;line-height:1.1;margin-top:6px}
+  .mvip p:not(.eyebrow){margin-top:10px;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.8)}
+  .mvip ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+  .mvip li{display:flex;gap:10px;font-size:14px;font-weight:600}
+  .mvip li::before{content:"♥";color:var(--pink);font-size:12px;margin-top:3px}
+  .vchat{margin-top:18px;display:grid;gap:8px;max-width:380px}
+  .vchat small{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .vchat .bub{background:rgba(255,255,255,.12);color:#fff}
+  .vchat .bub.me{background:var(--pink-deep)}
+  .mmore{margin:0 clamp(16px,3vw,28px) clamp(18px,3vw,30px);padding:clamp(26px,5vw,46px) clamp(18px,4vw,40px);text-align:center;border-radius:28px;border:1px solid var(--gold);background:radial-gradient(70% 90% at 50% 0%,rgba(232,160,181,.4),transparent 70%),linear-gradient(160deg,rgba(184,92,120,.55),rgba(42,31,36,.5));box-shadow:0 0 0 7px rgba(201,168,124,.1),0 30px 70px rgba(184,92,120,.3)}
+  .mmore .script{color:var(--gold-l);font-size:clamp(2.3rem,7vw,3.6rem)}
+  .mmore h4{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.1;margin-top:4px}
+  .mmore p:not(.script){margin:14px auto 0;max-width:560px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.88)}
+  .swipe{display:none;text-align:center;font-size:12px;font-weight:700;color:var(--pink);padding:0 0 10px;letter-spacing:.04em}
+  .mem-cta{margin-top:34px}
+  .mem-note{max-width:640px;margin:18px auto 0;text-align:center;font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.55)}
+  @media(max-width:700px){
+    .mapp{border-radius:26px}
+    .mnav{display:none}.marr{display:none}.swipe{display:block}
+    .mvip{grid-template-columns:1fr}.mvip .mc{width:min(220px,70%);margin-inline:auto}
+  }
+  /* modal do módulo */
+  .mdl{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:18px;background:rgba(42,31,36,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility 0s .35s}
+  .mdl.open{opacity:1;visibility:visible;transition:opacity .35s var(--ease),visibility 0s}
+  .mdl__c{position:relative;width:min(860px,100%);max-height:calc(100svh - 36px);overflow-y:auto;display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:clamp(18px,3vw,36px);align-items:center;padding:clamp(18px,3vw,34px);border-radius:32px;border:1px solid var(--gold);background:linear-gradient(160deg,#fff,var(--blush));color:var(--ink);box-shadow:0 0 0 8px rgba(201,168,124,.15),0 50px 120px rgba(0,0,0,.5);transform:translateY(24px) scale(.97);transition:transform .5s var(--ease)}
+  .mdl.open .mdl__c{transform:none}
+  .mdl__c img{width:100%;height:auto;border-radius:20px;box-shadow:0 24px 50px rgba(184,92,120,.35)}
+  .mdl__c h3{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:600;line-height:1.08;margin-top:8px}
+  .mdl__c p:not(.eyebrow){margin-top:12px;font-size:15px;line-height:1.7;color:var(--ink-soft)}
+  .mdl__c ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+  .mdl__c li{display:flex;gap:10px;font-size:14px;font-weight:600}
+  .mdl__c li::before{content:"♥";color:var(--pink-mid);font-size:12px;margin-top:3px}
+  .mdl__c .btn{margin-top:22px}
+  .mdl__x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--ink);font-size:16px;cursor:pointer;z-index:2}
+  .mdl__n{display:flex;gap:8px;margin-top:16px}
+  .mdl__n button{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--pink-deep);font-size:17px;cursor:pointer;transition:.25s}
+  .mdl__n button:hover{background:var(--pink-deep);color:#fff}
+  @media(max-width:700px){.mdl__c{grid-template-columns:1fr}.mdl__c img{max-width:230px;margin-inline:auto}}
 </style>
 </head>
 <body>
@@ -329,8 +454,10 @@
     <a href="#" class="brand">Glowa<small>Afiliadas</small></a>
     <nav><ul class="nlinks">
       <li><a href="#o-glowa">Produto</a></li>
+      <li><a href="#membros">Membros</a></li>
       <li><a href="#prova">Resultados</a></li>
       <li><a href="#simulador">Simulador</a></li>
+      <li><a href="#curadoria">Curadoria</a></li>
       <li><a href="#sistema">O que você recebe</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -343,8 +470,10 @@
   <div class="mmenu__h"><span class="brand">Glowa</span><button class="mmenu__x" id="mclose" aria-label="Fechar menu">✕</button></div>
   <ul>
     <li><a href="#o-glowa">Produto</a></li>
+    <li><a href="#membros">Membros</a></li>
       <li><a href="#prova">Resultados</a></li>
     <li><a href="#simulador">Simulador</a></li>
+    <li><a href="#curadoria">Curadoria</a></li>
     <li><a href="#sistema">O que você recebe</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -357,7 +486,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="pill rv"><i></i> programa de afiliadas · candidatura por análise ♡</div>
+        <div class="pill rv"><i></i> programa de afiliadas · candidatura por análise ♡</div><span class="vip rv">♛ Por convite · curadoria</span>
         <div class="logo rv" style="--d:100ms">Glow<b>a</b><small>Afiliadas</small></div>
         <h1 class="rv" style="--d:200ms">A marca que influenciadoras <em>querem representar.</em></h1>
         <p class="lede rv" style="--d:300ms">O GLOWA é o método de transformação feminina com mecanismo de vendas validado. Afiliadas com mais de 2 milhões de seguidores, inclusive modelos, já estão dentro. Se o seu perfil combina, você entra com site exclusivo, playbook e comissão em cada venda. 💖</p>
@@ -382,6 +511,20 @@
 </section>
 
 <div class="mq" aria-hidden="true"><div class="mq__t" id="mq"></div></div>
+
+<!-- NÚMEROS -->
+<section class="ledger">
+  <div class="wrap">
+    <p class="led-t">O programa em números</p>
+    <div class="led-grid">
+      <div class="led rv"><b data-c="2" data-pre="+" data-suf="M">0</b><span>seguidores no alcance de uma afiliada</span></div>
+      <div class="led rv" style="--d:80ms"><b data-c="6009.95" data-pre="R$ " data-dec="2">0</b><span>vendas em um único dia</span></div>
+      <div class="led rv" style="--d:160ms"><b data-c="30" data-suf=" dias">0</b><span>de garantia pra cliente indicar sem medo</span></div>
+      <div class="led rv" style="--d:240ms"><b data-c="27.5" data-pre="R$ " data-dec="2">0</b><span>comissão mínima por venda</span></div>
+    </div>
+    <p class="led-n">Prints reais de afiliadas · resultados variam conforme perfil, constância e divulgação</p>
+  </div>
+</section>
 
 <!-- QUEM JÁ ESTÁ DENTRO -->
 <section class="auth" id="quem-esta-dentro">
@@ -418,24 +561,104 @@
   </div>
 </section>
 
+
+<!-- ÁREA DE MEMBROS -->
+<section class="mem" id="membros">
+  <div class="feathers" id="feathers" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow rv">Área de membros</p>
+      <h2 class="title rv">Um universo inteiro <em>dentro do <span class="gl">Glow<b>a</b></span></em></h2>
+      <p class="lede rv">É isso que as suas seguidoras recebem quando compram: módulos em vídeo, bônus e uma comunidade VIP acolhedora, tudo numa área linda e fácil de usar no celular. Produto de verdade é o que deixa a indicação leve. Arrasta pro lado e explora 👉</p>
+    </div>
+    <div class="chips rv"><span>8 módulos de método</span><span>Bônus exclusivos</span><span>Muito mais lá dentro</span><span>Comunidade VIP</span><span>Acesso imediato</span><span>Celular ou computador</span></div>
+
+    <div class="mapp rv" id="app">
+      <div class="mtop">
+        <span class="gl">Glow<b>a</b></span>
+        <nav class="mnav" aria-label="Seções da área de membros"><button data-go="rMod">Módulos</button><button data-go="rBon">Bônus</button><button data-go="rVip">Comunidade</button></nav>
+        <span class="mav" aria-hidden="true">♡</span>
+      </div>
+
+      <div class="mhero">
+        <div class="mlogo" aria-label="GLOWA">Glow<b>a</b></div>
+        <h3>Bem-vinda, linda! ✨</h3>
+        <p>Seu espaço de transformação está pronto. Escolhe um módulo e começa por onde fizer mais sentido pra você.</p>
+        <button class="btn" data-open="0">Começar agora</button>
+      </div>
+
+      <div class="mrow" id="rMod">
+        <div class="mrow__h"><div><h4>Seus módulos</h4><small>Algumas das capas · lá dentro tem muito mais ♡</small></div><div class="marr"><button data-sc="-1" aria-label="Anterior">←</button><button data-sc="1" aria-label="Próximo">→</button></div></div>
+        <div class="mtrack" id="cvMods" tabindex="0" aria-label="Módulos"></div>
+        <p class="swipe">arrasta pro lado 👉</p>
+      </div>
+
+      <div class="mrow" id="rBon">
+        <div class="mrow__h"><div><h4>Bônus pra você 🎁</h4><small>Alguns dos bônus que ela recebe</small></div><div class="marr"><button data-sc="-1" aria-label="Anterior">←</button><button data-sc="1" aria-label="Próximo">→</button></div></div>
+        <div class="mtrack" id="cvBon" tabindex="0" aria-label="Bônus"></div>
+        <p class="swipe">arrasta pro lado 👉</p>
+      </div>
+
+      <div class="mrow" id="rVip">
+        <div class="mrow__h"><div><h4>Comunidade VIP 💬</h4><small>Onde todo mundo se acolhe</small></div></div>
+        <div class="mvip">
+          <button class="mc" data-open="8" style="width:100%"><span class="mc__img"><img src="src/img/bonus-vip.jpg" onerror="imgFb(this)" alt="Capa do bônus Grupo VIP" loading="lazy"></span></button>
+          <div>
+            <p class="eyebrow">Bônus Grupo VIP</p>
+            <h4>Uma comunidade onde todo mundo se acolhe</h4>
+            <p>Um ambiente seguro e carinhoso pra trocar ideia, tirar dúvida e crescer junto com outras mulheres que estão na mesma jornada.</p>
+            <ul><li>Comunidade ativa</li><li>Mulheres se apoiando de verdade</li><li>Você nunca faz a jornada sozinha</li></ul>
+            <div class="vchat"><small>exemplo ilustrativo</small>
+              <div class="bub">Gente, comecei o módulo de pele hoje! 🥹</div>
+              <div class="bub me">Vai amar! Qualquer dúvida é só chamar 💖</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mmore">
+        <p class="script">e tem muito mais lá dentro</p>
+        <h4>Ela compra e recebe muita coisa ✨</h4>
+        <p>O que você viu aqui é só uma prévia. Quem entra recebe um conteúdo completo, de extrema qualidade, feito com muito carinho e amor pra transformar de verdade a rotina e a autoestima dela.</p>
+      </div>
+    </div>
+    <p class="mem-note">Prévia ilustrativa da área de membros. Conteúdo, módulos e bônus podem ser atualizados e ampliados pela equipe do GLOWA.</p>
+    <div class="btn-row center mem-cta rv"><a href="#" data-wa class="btn btn--wa">Quero me candidatar e indicar →</a></div>
+  </div>
+</section>
+
+<div class="mdl" id="mdl" role="dialog" aria-modal="true" aria-labelledby="mdT" aria-hidden="true">
+  <div class="mdl__c">
+    <button class="mdl__x" id="mdX" aria-label="Fechar">✕</button>
+    <img id="mdI" src="" alt="">
+    <div>
+      <p class="eyebrow" id="mdE"></p>
+      <h3 id="mdT"></h3>
+      <p id="mdD"></p>
+      <ul id="mdL"></ul>
+      <a href="#" data-wa class="btn btn--wa">Quero me candidatar →</a>
+      <div class="mdl__n"><button id="mdP" aria-label="Anterior">←</button><button id="mdN" aria-label="Próximo">→</button></div>
+    </div>
+  </div>
+</div>
+
 <!-- PROVA -->
 <section class="proof" id="prova">
   <div class="wrap">
     <div class="head center">
       <p class="eyebrow rv">Prova real</p>
       <h2 class="title rv">Elas estão vendendo. <em>Todo dia.</em></h2>
-      <p class="lede rv">Prints de afiliadas GLOWA: comissões, PIX gerado e vendas aprovadas no celular delas. Arrasta pro lado 👉</p>
+      <p class="lede rv">Vídeo e prints de afiliadas GLOWA: comissões, PIX gerado e vendas aprovadas no celular delas. Arrasta pro lado 👉</p>
     </div>
     <div class="car rv">
       <div class="car__track" id="track">
+        <figure class="slide"><div class="fr"><video class="vsale" src="src/img/vendasvideo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo mostrando as vendas de uma afiliada GLOWA"></video></div><p>Vendas de uma afiliada</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/receitacakto.jpg" onerror="imgFb(this)" alt="R$ 6.009,95 em vendas no dia" loading="lazy" draggable="false"></div><p>Faturamento em um dia</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/vendascakto.jpg" onerror="imgFb(this)" alt="Notificações de venda aprovada e PIX gerado" loading="lazy" draggable="false"></div><p>Comissões chegando</p></figure>
         <figure class="slide"><div class="fr"><img src="src/img/vendascakto2.jpg" onerror="imgFb(this)" alt="Várias comissões de PIX e cartão" loading="lazy" draggable="false"></div><p>Mais vendas no mesmo dia</p></figure>
-        <figure class="slide"><div class="fr"><img src="src/img/graficocakto.jpg" onerror="imgFb(this)" alt="Gráfico de receitas do dia com 35 vendas" loading="lazy" draggable="false"></div><p>35 vendas · R$ 686</p></figure>
       </div>
       <div class="car__nav"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button></div>
     </div>
-    <p class="bigline rv"><strong>R$ 686</strong> em um dia com 35 vendas. E tem afiliada passando de <strong>R$ 6.000</strong> no mesmo período.</p>
+    <p class="bigline rv">Tem afiliada passando de <strong>R$ 6.000</strong> em um único dia.</p>
     <p class="proof-note rv">A comissão mínima por venda é de R$ 27,50 e sobe quando a cliente leva os order bumps. Cada print é de um dia de uma afiliada: os resultados variam conforme o tamanho do perfil, a constância e a divulgação.</p>
   </div>
 </section>
@@ -491,6 +714,30 @@
       <a href="#" data-wa class="btn">Quero minha estratégia →</a>
     </div></div>
   </div>
+</section>
+
+<!-- CURADORIA + PRÉ-ANÁLISE -->
+<section class="cur" id="curadoria">
+  <div class="wrap"><div class="cur-grid">
+    <div>
+      <p class="eyebrow rv">Curadoria de perfis</p>
+      <h2 class="title rv">Não é um programa aberto. <em>É um clube.</em></h2>
+      <p class="lede rv" style="margin-top:14px">Cada candidatura passa por análise pra manter o nível da marca. Criadoras de todos os tamanhos entram, desde que o perfil combine. Veja o que olhamos:</p>
+      <div class="crit rv">
+        <div><i>♡</i><p><b>Encaixe com beleza e lifestyle</b><span>Seu conteúdo conversa com autocuidado feminino?</span></p></div>
+        <div><i>✦</i><p><b>Constância e conexão</b><span>Audiência que confia em você pesa mais que número.</span></p></div>
+        <div><i>♛</i><p><b>Estética e presença</b><span>O feed precisa estar à altura da marca.</span></p></div>
+      </div>
+    </div>
+    <div class="pre rv">
+      <h3>Faça sua pré-análise ♡</h3>
+      <p class="s">Preenche e a mensagem já vai personalizada pro nosso WhatsApp.</p>
+      <input type="text" id="pH" placeholder="@seuperfil" autocomplete="off" aria-label="Seu @">
+      <div class="ctl"><label for="pF">Seguidores <output id="pO">50 mil</output></label><input type="range" id="pF" min="0" max="5" value="2"></div>
+      <span class="tier" id="pT">Perfil em crescimento</span>
+      <a href="#" id="pGo" class="btn btn--wa" style="width:100%">Enviar minha pré-análise →</a>
+    </div>
+  </div></div>
 </section>
 
 <!-- SISTEMA -->
@@ -588,7 +835,6 @@
         <a href="#" data-wa class="btn btn--wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Quero me candidatar</a>
       </div>
       <p class="note">Cada perfil é analisado com cuidado · resposta em <b>menos de 24h</b> 💌</p>
-      <p class="note note--s">Já conversou com a gente? <a href="#" data-cakto target="_blank" rel="noopener">Aceite seu convite de afiliação aqui</a></p>
     </div>
   </div>
 </section>
@@ -617,13 +863,11 @@
   const WHATSAPP = "554796567823";
   const MESSAGE = "Oi, tudo bem? 💖 Acabei de vir pelo site de afiliadas do GLOWA e quero me candidatar pra vender com vocês! Sou influencer e queria saber os próximos passos 🌸✨";
   const CAKTO_INVITE = "https://app.cakto.com.br/affiliate/invite/d1a5edec-e555-4bdb-809c-db7954c337ce";
-  // ---- provas humanas (preencha quando tiver; se ficar vazio, a seção não aparece) ----
-  // {name:"Ana", handle:"@ana", niche:"skincare", followers:"18k", photo:"src/img/ana.jpg", quote:"..."}
   const AFFILIATE_TESTIMONIALS = [];
-  const AFFILIATES_COUNT = null;      // ex: 120  -> mostra "+120 afiliadas ativas"
-  const GROUP_PRINT = "";             // ex: "src/img/grupo.jpg" (print real do grupo, nomes borrados)
-  const SITE_PREVIEW = "";            // ex: "src/img/site-afiliada.jpg" (site real de uma afiliada)
-  const COMMISSION_PER_SALE = 27.5; // comissão mínima por venda (R$ 27,50)
+  const AFFILIATES_COUNT = null;
+  const GROUP_PRINT = "";
+  const SITE_PREVIEW = "";
+  const COMMISSION_PER_SALE = 27.5;
 
   const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESSAGE);
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
@@ -648,7 +892,7 @@
   burger.onclick = () => setM(true); document.getElementById('mclose').onclick = () => setM(false);
   mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setM(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setM(false); });
-  addEventListener('resize', () => { if (innerWidth > 900) setM(false); });
+  addEventListener('resize', () => { if (innerWidth > 1000) setM(false); });
 
   /* reveal */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08, rootMargin: '0px 0px -30px 0px' });
@@ -773,5 +1017,102 @@
   const hio = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? hiding.add(e.target) : hiding.delete(e.target)); upd(); }, { threshold: .15 });
   [document.getElementById('candidatar'), document.querySelector('footer')].forEach(el => hio.observe(el));
 </script>
+
+<script>
+/* ===== UPGRADE: sparkles, tilt, contadores, pré-análise ===== */
+(function(){try{
+const q=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!RM){
+ const cv=document.createElement('canvas');cv.className='spark';document.body.appendChild(cv);const cx=cv.getContext('2d');let P=[];
+ const rs=()=>{cv.width=innerWidth;cv.height=innerHeight};rs();addEventListener('resize',rs);
+ const add=(x,y,n,b)=>{for(let i=0;i<n;i++)P.push({x,y,vx:(Math.random()-.5)*(b?6:1.2),vy:(Math.random()-.5)*(b?6:1.2)-(b?1.5:0),l:1,s:8+Math.random()*10,c:Math.random()<.5?'✦':'♥',h:Math.random()<.4?'#C9A87C':'#E8A0B5'})};
+ addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&Math.random()<.45)add(e.clientX,e.clientY,1)});
+ addEventListener('pointerdown',e=>add(e.clientX,e.clientY,12,1));
+ (function f(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.l>0);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.03;p.l-=.022;cx.globalAlpha=Math.max(p.l,0);cx.fillStyle=p.h;cx.font=p.s+'px serif';cx.fillText(p.c,p.x,p.y)});requestAnimationFrame(f)})();
+ document.querySelectorAll('.led,.crit div').forEach(el=>{
+  el.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*10)+'deg) translateY(-4px)'});
+  el.addEventListener('pointerleave',()=>el.style.transform='');
+ });
+}
+const fm=(n,d)=>n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,T=+el.dataset.c,d=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=performance.now();(function s(t){const p=Math.min(1,(t-t0)/1800),v=T*(1-Math.pow(1-p,4));el.textContent=pre+fm(v,d)+suf;if(p<1)requestAnimationFrame(s)})(t0)}),{threshold:.5});
+document.querySelectorAll('[data-c]').forEach(el=>cio.observe(el));
+
+const L=[['até 10 mil','Perfil iniciando'],['10 mil','Perfil em crescimento'],['50 mil','Perfil em crescimento'],['100 mil','Perfil de alto alcance'],['500 mil','Perfil premium ♛'],['1 milhão+','Perfil premium ♛']];
+const pF=q('#pF'),pH=q('#pH'),pGo=q('#pGo');
+function up(){const l=L[pF.value];q('#pO').textContent=l[0];q('#pT').textContent=l[1];pF.style.setProperty('--p',pF.value/5*100+'%');
+ const m='Oi, tudo bem? 💖 Vim pelo site de afiliadas do GLOWA e quero me candidatar! Meu perfil: '+(pH.value.trim()||'(vou mandar o link)')+' · aprox. '+l[0]+' seguidores. Queria saber os próximos passos 🌸✨';
+ pGo.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(m);pGo.target='_blank';pGo.rel='noopener'}
+pF.addEventListener('input',up);pH.addEventListener('input',up);up();
+}catch(e){console.error('GLOWA upgrade:',e)}})();
+</script>
+
+<script>
+/* ===== ÁREA DE MEMBROS ===== */
+(function(){try{
+const ITEMS=[
+ {img:'modulo1.jpg',e:'Módulo 1',t:'Antropometria e Fenótipos',d:'Comece entendendo suas proporções e o seu fenótipo, a base pra fazer escolhas que realmente valorizam você.',l:['Leitura das suas proporções','Entendendo o seu fenótipo','A base de todos os outros módulos']},
+ {img:'modulo2.jpg',e:'Módulo 2',t:'Cabelo, Harmonia e Volume',d:'Cabelo que combina com a sua estrutura: harmonia com o rosto, volume e movimento.',l:['Cabelo e harmonia facial','Volume e movimento','Escolhas que valorizam']},
+ {img:'modulo3.jpg',e:'Módulo 3',t:'Olhar, Sobrancelha e Maquiagem',d:'Do olhar à maquiagem completa: aprenda a realçar o que já é seu.',l:['Olhar e sobrancelha','Maquiagem que favorece','Realce sem exagero']},
+ {img:'modulo4.jpg',e:'Módulo 4',t:'Ossos, Desenvolvimento e Hormônios',d:'Entenda a estrutura por trás da sua aparência e como ela se desenvolve.',l:['Estrutura e desenvolvimento','Conhecimento pra se enxergar melhor','Conteúdo explicado de forma leve']},
+ {img:'modulo5.jpg',e:'Módulo 5',t:'Corpo, Rosto e Composição',d:'Como corpo e rosto se combinam numa composição harmônica e o que fazer com isso.',l:['Corpo e rosto em conjunto','Composição e equilíbrio','Aplicação no dia a dia']},
+ {img:'modulo6.jpg',e:'Módulo 6',t:'Pele, Ácidos e Rotina',d:'Monte uma rotina de skincare que faz sentido pra sua pele, entendendo o papel dos ácidos.',l:['Rotina de pele passo a passo','Ácidos sem medo','Constância que dá resultado']},
+ {img:'modulo7.jpg',e:'Módulo 7',t:'Presença, Comunicação e Autoridade',d:'Presença que se sente: como se comunicar e ocupar o seu lugar com confiança.',l:['Presença e postura','Comunicação com confiança','Autoridade com leveza']},
+ {img:'modulo8.jpg',e:'Módulo 8',t:'Manifestação',d:'O fechamento da jornada: visualizar, decidir e sustentar a mulher que você quer ser.',l:['Clareza do que você quer','Hábitos que sustentam','Seguir no seu ritmo']},
+ {img:'bonus-vip.jpg',e:'Bônus',t:'Grupo VIP',d:'Uma comunidade ativa onde todo mundo se acolhe, troca ideia e cresce junto.',l:['Comunidade acolhedora','Troca entre mulheres','Apoio na sua jornada']},
+ {img:'bonus-receitas.jpg',e:'Bônus',t:'Receitas Saudáveis',d:'Receitas práticas e gostosas pra acompanhar a sua rotina de autocuidado.',l:['Receitas fáceis de fazer','Pra rotina corrida','Sabor e leveza']}
+];
+const alts=ITEMS.map(i=>'Capa: '+i.e+' '+i.t);
+function card(i){const it=ITEMS[i];return '<button class="mc" data-open="'+i+'" aria-label="Ver prévia: '+it.e+' '+it.t+'"><span class="mc__img"><img src="src/img/'+it.img+'" onerror="imgFb(this)" alt="'+alts[i]+'" loading="lazy" draggable="false"></span></button>'}
+const mods=document.getElementById('cvMods'),bon=document.getElementById('cvBon');
+for(let i=0;i<8;i++)mods.insertAdjacentHTML('beforeend',card(i));
+[8,9].forEach(i=>bon.insertAdjacentHTML('beforeend',card(i)));
+
+/* arrastar pro lado (mouse) + setas */
+let moved=false;
+document.querySelectorAll('.mtrack').forEach(t=>{
+ let down=false,sx=0,sl=0;
+ t.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=t.scrollLeft});
+ t.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>5){moved=true;t.classList.add('drag');t.scrollLeft=sl-dx}});
+ const up=()=>{if(!down)return;down=false;t.classList.remove('drag')};
+ t.addEventListener('pointerup',up);t.addEventListener('pointerleave',up);t.addEventListener('pointercancel',up);
+ t.addEventListener('dragstart',e=>e.preventDefault());
+});
+document.querySelectorAll('.marr button').forEach(b=>b.addEventListener('click',()=>{const t=b.closest('.mrow').querySelector('.mtrack');t.scrollBy({left:+b.dataset.sc*(t.clientWidth*.7),behavior:'smooth'})}));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth',block:'start'})));
+
+/* modal */
+const md=document.getElementById('mdl'),mdI=document.getElementById('mdI');let cur=0,last=null;
+function fill(i){cur=(i+ITEMS.length)%ITEMS.length;const it=ITEMS[cur];mdI.src='src/img/'+it.img;mdI.alt=alts[cur];mdI.dataset.n=0;mdI.dataset.f=it.img;
+ document.getElementById('mdE').textContent=it.e;document.getElementById('mdT').textContent=it.t;document.getElementById('mdD').textContent=it.d;
+ document.getElementById('mdL').innerHTML=it.l.map(x=>'<li>'+x+'</li>').join('')}
+mdI.onerror=function(){imgFb(this)};
+function openM(i){last=document.activeElement;fill(i);md.classList.add('open');md.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';document.getElementById('mdX').focus()}
+function closeM(){md.classList.remove('open');md.setAttribute('aria-hidden','true');document.body.style.overflow='';if(last)last.focus()}
+document.getElementById('app').addEventListener('click',e=>{if(moved){moved=false;return}const b=e.target.closest('[data-open]');if(b)openM(+b.dataset.open)},true);
+document.getElementById('mdX').onclick=closeM;
+md.addEventListener('click',e=>{if(e.target===md)closeM()});
+document.getElementById('mdP').onclick=()=>fill(cur-1);
+document.getElementById('mdN').onclick=()=>fill(cur+1);
+addEventListener('keydown',e=>{if(!md.classList.contains('open'))return;if(e.key==='Escape')closeM();if(e.key==='ArrowLeft')fill(cur-1);if(e.key==='ArrowRight')fill(cur+1)});
+
+/* penas + tilt */
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ const f=document.getElementById('feathers');
+ for(let i=0;i<16;i++){const s=document.createElement('i');s.style.left=(Math.random()*100)+'%';s.style.setProperty('--t',(14+Math.random()*12)+'s');s.style.setProperty('--dl',(-Math.random()*20)+'s');s.style.setProperty('--sx',(20+Math.random()*60)*(Math.random()<.5?-1:1)+'px');s.style.transform='scale('+(.6+Math.random()*.9)+')';f.appendChild(s)}
+ const app=document.getElementById('app');
+ app.addEventListener('pointermove',e=>{const c=e.target.closest('.mc');if(!c||e.pointerType!=='mouse'||c.closest('.mvip'))return;const im=c.querySelector('.mc__img'),r=im.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*10)+'deg) translateY(-5px)'});
+ app.addEventListener('pointerout',e=>{const c=e.target.closest('.mc');if(c)c.style.transform=''});
+}
+document.querySelectorAll('#membros [data-wa],#mdl [data-wa]').forEach(a=>{a.href=waUrl;a.target='_blank';a.rel='noopener'});
+}catch(e){console.error('GLOWA membros:',e)}})();
+</script>
+
+<script>
+/* vídeo de vendas: toca só quando aparece na tela */
+(function(){const v=document.querySelector('.vsale');if(!v)return;v.muted=true;
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const p=v.play();if(p&&p.catch)p.catch(()=>{})}else v.pause()}),{threshold:.35});io.observe(v)})();
+</script>
 </body>
-</html> 
+</html>
